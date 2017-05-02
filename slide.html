@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.slider {
+	position:relative;
+	width:900px;
+	height:200px;
+}
+img {
+	width:300px;
+	height:200px;
+	overflow:hidden;
+	float:left;
+	background:aqua;
+	position:absolute;
+}
+
+</style>	
+
+
+
+
+</head>
+<body>
+
+<script src="../js/jquery.js">
+
+</script>
+
+
+<style>
+.fadein { position:relative; height:210px; width:201px; }
+.fadein img { position:absolute; left:-300; top:0; }
+</style>
+
+<script type="text/javascript">
+$(function(){
+$('.fadein img:gt(0)').hide();
+setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');},2000);
+});
+</script>
+<div class="fadein" style='margin-left:130px;height:194px;width:259px;'>
+<img src="../new/i.jpg">
+<img src="../new/down.jpg">
+<img src="../new/im.jpg">
+</div>
+
+</body>
+</html>

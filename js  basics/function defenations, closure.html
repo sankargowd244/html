@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+<p>hello <br> world</p>
+<script>
+// function decleration 
+function myfunction(a,b){
+return a*b;
+}
+myfunction(2,3); //this is called function calling
+//function expression
+var x=function(a,b){
+return a*b;
+}
+ var z=x(2,3) 
+//function constructor
+var myFunc=new Function('a','b','return a*b')
+var x=myFunc(3,5);
+//function hoisting
+// means moving declerations to top of current scope
+myFunc(4);
+function myFunc(y){
+return y*y;
+}
+//IIFE OR  immediately invoke functions
+(function(){
+var x='hello';
+} )();
+//closure
+function sayHello(name){
+var text='hello'+name;
+var say=function (){console.log(text);}
+say();
+}
+sayHello('san');
+//anathor defenation for closure
+function init() {
+  var name = 'Mozilla'; // name is a local variable created by init
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function    
+  }
+  displayName();    
+}
+init();
+</script>
+</body>
+</html>

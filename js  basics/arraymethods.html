@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+//substring defined as starting and end
+var str='hello world';
+var re=str.substring(2,8);   //re= llo wo  
+var a=['aas','asd','dfdf','ll'];
+a.valueOf();
+["aas", "asd", "dfdf", "ll"]
+a
+["aas", "asd", "dfdf", "ll"]
+console.log(a.valueOf())
+VM430:1 ["aas", "asd", "dfdf", "ll"]
+undefined
+a.unshift('erer','tty')
+6
+a
+["erer", "tty", "aas", "asd", "dfdf", "ll"]
+a.toString()
+"erer,tty,aas,asd,dfdf,ll"
+a.splice(2,0,'ghgh','yuyu')
+[]
+a
+["erer", "tty", "ghgh", "yuyu", "aas", "asd", "dfdf", "ll"]
+//sort()
+var aa=[23,45,65,43,78,2,9];
+undefined
+aa.sort(function(a,b){return a-b});
+[2, 9, 23, 43, 45, 65, 78]
+//some()
+var ages=[12,23,21,21,45];
+function func(age){
+return age>25;
+}
+alert(ages.some(func))
+//slice()  == slice(start,end)
+var s=['mango','lemon','orenge','gua','banana'];
+s.slice(1,2); // lemon,gua
+//shift()
+var aa=[23,45,65,43,78,2,9];
+aa.shift();
+//reverse()
+aa.reverse();
+//reduceRight()
+var sd=[12,34,45,23];
+function get(total,num){
+return total+num;
+}
+alert(sd.reduceRight(get));
+//map()
+var e=[3,4,9,16,25,5];
+e.map(Math.sqrt); 
+//indexOf()
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.indexOf('Apple')
+2
+fruits.lastIndexOf("Apple")
+2
+//isArray()
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+Array.isArray(fruits);
+//filter()
+var d=[2,23,43,12,24];
+function check(num){
+ return num>23;
+}
+alert(d.filter(check));
+//fill()
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.fill('kiwi');
+//every()
+var ages = [32, 33, 16, 40];
+
+function check(age) {
+    return age >= 18;
+}
+alert(ages.every(check));
+//concat()
+var hege = ["Cecilie", "Lone"];
+var stale = ["Emil", "Tobias", "Linus"];
+var x= hege.concat(stale);
+//find()
+var r=[1,2,3,34,23];
+function check(num){
+
+return num>20;
+
+}
+alert(r.find(check));
+
+//anathor
+var fruits=["banana", "kiwi", "orenge"];
+var citrus= fruits.slice(1);
+document.getElementById("demo").innerHTML= fruits + "<br>" + citrus;
+
+function myFunction(){
+	var myGirls = ["dsjfh", "ekfjf","kdhd"];
+	var myBoys= ["df", "wwd", "ad"];
+	var myChildren=myGirls.concat(myBoys);
+	document.getElementById("demo").innerHTML= myChildren;
+}
+var points= ["23", "43", "56", "98"];
+points.sort(function(a,b){return a-b}); 
+document.getElementById("demo").innerHTML=points[0];
+var points= ["23", "43", "56", "98"];
+points.sort(function(a,b){return b-a});
+document.getElementById("demo").innerHTML=points[0];
+var points=["45", "56", "78"];
+points.sort(function(a,b){return b>a});
+
+document.getElementById("demo").innerHTML=points;
+var fruits=["5", "6","9"];
+fruits.sort();
+fruits.reverse();
+document.getElementById("demo").innerHTML=points;
+
+var fruits=["Banana", "Orange", "Apple", "Mango"];
+function myFunction(){
+fruits.sort();
+document.getElementById("demo").innerHTML=fruits;
+
+}
+//practice all array methods
+ar a=[1,2,3,4];
+
+a.valueOf();
+[1, 2, 3, 4]
+var b=a.concat(a);
+undefined
+b
+[1, 2, 3, 4, 1, 2, 3, 4]
+b.shift();
+1
+b
+[2, 3, 4, 1, 2, 3, 4]
+b.unshift(1,2)
+9
+b
+[1, 2, 2, 3, 4, 1, 2, 3, 4]
+b.unshift('6','7')
+11
+b
+["6", "7", 1, 2, 2, 3, 4, 1, 2, 3, 4]
+b.splice(2,2)
+[1, 2]
+b.splice(2,4);
+[2, 3, 4, 1]
+b
+["6", "7", 2, 3, 4]
+b.slice()
+["6", "7", 2, 3, 4]
+b.join('')
+"67234"
+b.toString()
+"6,7,2,3,4"
+
+b.splice(2,2, 8,9,7);
+[2, 3]
+b
+["6", "7", 8, 9, 7, 4]
+b.splice(2,0, 0,1,2)
+[]
+b
+["6", "7", 0, 1, 2, 8, 9, 7, 4]
+b.sort(function(a,b){return a-b});
+[0, 1, 2, 4, "6", "7", 7, 8, 9]
+b
+[0, 1, 2, 4, "6", "7", 7, 8, 9]
+b.sort(function(a,b){return b-a})
+[9, 8, "7", 7, "6", 4, 2, 1, 0]
+b.slice(1,2);
+[8]
+b
+[9, 8, "7", 7, "6", 4, 2, 1, 0]
+var s=['mango','lemon','orenge','gua','banana'];
+s.slice(1,2);
+["lemon"]
+s
+["mango", "lemon", "orenge", "gua", "banana"]
+s.slice(2,2);
+[]
+s.slice(3,2)
+[]
+s
+["mango", "lemon", "orenge", "gua", "banana"]
+s.slice(1,2)
+["lemon"]
+s.slice(2,4)
+["orenge", "gua"]
+s.slice(3,1)
+[]
+b.reverse()
+[0, 1, 2, 4, "6", 7, "7", 8, 9]
+function get(t,n){
+return t+n;
+}
+b.reduce(get)
+"767789"
+b.map(Math.sqrt)
+[0, 1, 1.4142135623730951, 2, 2.449489742783178, 2.6457513110645907, 2.6457513110645907, 2.8284271247461903, 3]
+b.indexOf('6')
+4
+b.lastIndexOf(8)
+7
+Array.isArray(b)
+true
+function che(num){
+return num>4;
+}
+
+b.filter(che);
+["6", 7, "7", 8, 9]
+b.fill(0,9);
+[0, 1, 2, 4, "6", 7, "7", 8, 9]
+b.fill(23)
+[23, 23, 23, 23, 23, 23, 23, 23, 23]
+b.fill(4)
+[4, 4, 4, 4, 4, 4, 4, 4, 4]
+b.fill(2,3)
+[4, 4, 4, 2, 2, 2, 2, 2, 2]
+b.fill(0,3)
+[4, 4, 4, 0, 0, 0, 0, 0, 0]
+b.fill(2,5)
+[4, 4, 4, 0, 0, 2, 2, 2, 2]
+b.fill(0,1)
+[4, 0, 0, 0, 0, 0, 0, 0, 0]
+b.fill(0)
+[0, 0, 0, 0, 0, 0, 0, 0, 0]
+</script>
+<button onclick="myFunction()">Try it</button>
+
+</body>
+</html>

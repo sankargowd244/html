@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+
+<script>
+var num=10.3;
+var round=Math.round(num);
+alert(round); //10
+
+var num2= Math.pow(2,3);
+alert(num2); //8
+var num3 =Math.sqrt(16);
+alert(num3);  //4
+
+Math.floor(45.95)
+//45
+Math.floor(-45.08)
+//-46
+Math.cbrt(8)
+//2
+
+Math.ceil(.95);    // 1
+Math.ceil(4);      // 4
+Math.ceil(7.004);  // 8
+Math.ceil(-0.95);  // -0
+Math.ceil(-4);     // -4
+Math.ceil(-7.004); // -7
+//abs=absolute value
+Math.abs(6.66); // 6.66
+//fround is nearest float representation of number
+Math.fround(8.8888888)   //8.888888359069824
+
+Math.exp(9,2)   //8103.083927575384
+//imul is multiplication
+Math.imul(2, 4);          // 8
+Math.imul(-1, 8);         // -8
+Math.imul(-2, -2);        // 4
+Math.imul(0xffffffff, 5); // -5
+Math.imul(0xfffffffe, 5); // -10
+
+Math.max(10, 20);   //  20
+Math.max(-10, -20); // -10
+Math.max(-10, 20);  //  20
+
+//trunc return integer and remove fractional digits
+Math.trunc(13.37);    // 13
+Math.trunc(42.84);    // 42
+Math.trunc(0.123);    //  0
+Math.trunc(-0.123);   // -0
+Math.trunc('-1.123'); // -1
+Math.trunc(NaN);      // NaN
+Math.trunc('foo');    // NaN
+Math.trunc();         // NaN
+//random
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+</body>
+</html>

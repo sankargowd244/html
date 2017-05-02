@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+       #new{
+           display:table;
+       }
+	   ul{
+	   list-style:none;
+	   }
+    </style>
+</head>
+<body>
+<div id="button">
+	<button id="select">select</button>
+    <button id="add">add checkbox</button>
+    <button id="remove">delete checkbox</button>
+    <ul id="new"></ul>
+	
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#add').click(function () {
+               var num=['one','two', 'three', 'four','five','six','seven','eight','three', 'four','five','six','seven','eight'];
+			 var total=num[$('#new input').length];
+			  
+               $("#new").append('<li><input type="checkbox">'+total+'</li>');
+			/*$('#add').click(function(){
+			var num=[1,2,3,4,5,6];
+			var total=num[$('#new input').length];
+			$("#new").append('<li>'+total+'</li>');
+			*/   
+            });
+			$('#select').click(function(){
+			$("input").prop('checked', true);
+			alert("hi");
+			});
+			$("#remove").click(function(){
+			$('li:last-child').remove();
+			alert("hi");
+			});
+			
+        });
+    </script>
+</body>
+</html>

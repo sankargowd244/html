@@ -1,0 +1,28 @@
+ <!doctype html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+   <h2> tooltip options</h2>
+  <p>The <strong>delay</strong> option specifies the number of milliseconds it will take to show and hide the popover.</p>
+  <p>This tooltip will take 1000 milliseconds to show when you hover over it, and 1000 milliseconds to hide on mouse leave.</p>
+  <button class="btn btn-success btn-md">hover over me(1000ms)</button><br>
+   autofocus="<p>This tooltip will take 500 milliseconds to show when you hover over it, and 100 ms to hide on mouse leave.</p>"
+   <button class="btn btn-danger btn-md">hover over me (1000ms)</button>
+</div>
+<script>
+$(document).ready(function(){
+  $(".btn-success").tooltip({title:"this is very exciting movement",delay:1000});
+  $(".btn-danger").tooltip({title:"this is so beautiful i cann't beleive this",delay:{show:500,hide:100}});
+});
+</script>
+</body>
+</html>

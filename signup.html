@@ -1,0 +1,72 @@
+
+<html>
+<head>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<style>
+label,input{
+                float:left;
+                width:15%;
+}
+.error{
+                color:red;
+}
+label:after{
+                content:"*" ;
+    color:red  
+}
+</style>
+<body>
+<div ng-app="app">
+  <div ng-controller="homeCtrl">
+    <form name="signupForm">
+      <div class="fieldset" ng-class="{'has-error':formData.password.$invalid && !formData.password.$pristine}">
+        <div><label>Password</label></div>
+        <div><input type="password" id="password" name="password" ng-model="formData.password" ng-maxlength="8" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required /></div>
+        <p ng-show="signupForm.password.$error.required" class="error"></p>
+        <p ng-show="signupForm.password.$error.maxlength" class="error">
+          Passwords must be upto 8 characters.</p>
+        <p ng-show="signupForm.password.$error.pattern" class="error">
+          Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</p>
+      </div>
+ 
+      <div class="fieldset" ng-class="{'has-error':formData.password_c.$invalid && !formData.password_c.$pristine}">
+        <div><label for="password_c">Confirm Password</label></div>
+        <div><input type="password" id="password_c" name="password_c" ng-model="formData.password_c"  valid-password-c="formData.password" required /></div>
+        <p ng-show="signupForm.password_c.$error.noMatch" class="error">Passwords do not match.</p>
+        <p ng-show="signupForm.password_c.$error.required" class="error"></p>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+ 
+var app = angular.module('app', []);
+app.directive('validPasswordC', function() {
+  return {
+    require: 'ngModel',
+    scope: {
+      reference: '=validPasswordC'
+    },
+    link: function(scope, elm, attrs, ctrl) {
+      ctrl.$parsers.unshift(function(viewValue, $scope) {
+ 
+        var noMatch = viewValue != scope.reference
+        ctrl.$setValidity('noMatch', !noMatch);
+        return (noMatch)?noMatch:!noMatch;
+      });
+ 
+      scope.$watch("reference", function(value) {;
+        ctrl.$setValidity('noMatch', value === ctrl.$viewValue);
+ 
+      });
+    }
+  }
+});
+app.controller('homeCtrl', function($scope) {
+});
+ 
+</script>
+</body>
+</html>
+ 

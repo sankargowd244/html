@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<!--localstorage-->
+<ol onblur="localStorage.setItem('mylist', this.innerHTML);"
+    contenteditable>
+
+  <li> </li>
+</ol>
+<!--contenteditable -->
+<ol contenteditable onblur="alert(this.innerHTML);">
+  <li> </li>
+</ol>
+<!--self checking input -->
+<form action="javascript:alert('Good!');">
+  <input type="email" required placeholder="email address"/>
+
+  <input type="submit"/>
+</form>
+<script>
+var x=[];
+var x=[0];
+var x=[1];
+alert(x);
+var y=[1,2,3,4,5,6];
+var fifthy=y[4];
+alert(fifthy);
+var z=[1,2,3,4,5,6];
+var v=z[5];
+alert(v);
+var wlength=z.length;
+alert(wlength);
+function=range(max)
+{
+	var retval=[];
+	for(var i=0;i<max; i++)
+	{
+	retval[i]=i*2;
+}
+return retval;
+}
+alert(range(5));
+</script>
+</body>
+</html>

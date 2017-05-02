@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+   
+   <head>
+      <title>Angular JS Views</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+   </head>
+   
+   <body>
+    <h2>angularjs sample application</h2>
+	<div ng-app="mainApp" ng-controller="calcCtrl">
+	<p> Enter number:<input type="number" ng-model="number"></p>
+	<button ng-click="squar()">x<sup>2</sup></button>
+	<p>result:{{result}}</p>
+	
+	</div>  
+      <script>
+      var app=angular.module("mainApp", []);
+	  app.config(function($provide){
+	  $provide.provider('MathService', functio(){
+	  this.$get= function(){
+	  var factory={};
+	  factory.multiply= function(a,b){
+	  return a*b;
+	  }
+	  return factory;
+	  };
+	  });
+	  
+	  });
+	  app.value("defaultInput", 5);
+	  app.factory('MathService', function(){
+	  var factory={};
+	  factory.multiply= function(a,b){
+	  return a*b;
+	  }
+	  return factory;
+	  });
+	  app.service('CalcService', function(MathService){
+	  this.squar=function(a){
+	  return MathService.multiply(a,a);
+	  }
+	  });
+	  app.controller('CalcCtrl', function($scope,CalcService,defaultInput){
+	  $scope.number=defaultInput;
+	  $scope.result=CalcService.square($scope.number);
+	  $scope.squar=function(){
+	  $scope.result=CalcService.square($scope.number);
+	  }
+	  });
+      </script>
+      
+   </body>
+</html>

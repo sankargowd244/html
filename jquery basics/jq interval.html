@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#toggle").on("click", function(){
+$("div").toggle(6000);
+});
+$("#interval").on("click", function(){
+jQuery.fx.interval=500;
+});
+});
+</script>
+
+
+
+</head>
+<body>
+
+<button id="toggle">Toggle div</button>
+<button id="interval">Run animation with less frames</button>
+
+<div style="background:#98bf21;height:100px;width:100px;margin:50px;"></div>
+
+
+
+
+</body>
+</html>

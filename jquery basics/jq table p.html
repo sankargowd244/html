@@ -1,0 +1,158 @@
+ <!doctype html>
+<html>
+<head>
+<style>
+#table {
+border-collapse:none;
+}
+th {
+	width:100px;
+	height:30px;
+}
+td {
+	width:100px;
+	height:30px;
+}
+input {
+	display:none;
+	
+}
+</style>
+</head>
+<body>
+<table id="table" border="2" style= "box-size:border-box">
+<tr>
+<th>Name</th>
+<th>Salery</th>
+<th>Place</th>
+<th>Action></th>
+</tr>
+<tr>
+<td><span class="td1">year</span><input class="td2" placeholder="year"></td>
+<td><span class="td1">toyota</span><input class="td2" placeholder="tayota"></td>
+<td><span class="td1">volvo</span><input class="td2" placeholder="volvo"></td>
+<td><span class="td1">fiat</span><input class="td2" placeholder="fial"></td>
+
+<td><button class="btnedit1">edit</button></td>
+<td><button class="btnsave1">save</button></td>
+<td><button class="btndel">delete</button></td>
+</tr>
+<tr>
+<td><span class="td3">2014</span><input class="td4" placeholder="2014"></td>
+<td><span class="td3">9</span><input class="td4" placeholder="9"></td>
+<td><span class="td3">8</span><input class="td4" placeholder="8"></td>
+<td><span class="td3">7</span><input class="td4" placeholder="7"></td>
+<td><span class="td3">6</span><input class="td4" placeholder="6"></td>
+<td><button class="btnedit2">edit</button></td>
+<td><button class="btnsave2">save</button></td>
+</tr>
+<tr>
+<td><span class="td5">2015</span><input class="td6" placeholder="2015"></td>
+<td><span class="td5">10</span><input class="td6" placeholder="10"></td>
+<td><span class="td5">11</span><input class="td6" placeholder="11"></td>
+<td><span class="td5">12</span><input class="td6" placeholder="12"></td>
+<td><span class="td5">13</span><input class="td6" placeholder="13"></td>
+<td><button class="btnedit3">edit</button></td>
+<td><button class="btnsave3">save</button></td>
+<td><button class="btn7">add</button></td>
+</tr>
+</table>
+
+<script src="../js/jquery.js">
+
+</script>
+<script type="text/javascript">
+ 
+  
+	//$(document).ready(function(){
+	$('.btnedit1').click(function(){
+  // alert("edit"); 
+		$(".td2").show();
+			$(".td1").hide();
+			
+  });
+  
+  	$('.btnedit2').click(function(){
+  // alert("edit"); 
+				$(".td4").show();
+			$(".td3").hide();
+	
+ });
+ 
+ 
+  	$('.btnedit3').click(function(){
+  // alert("edit"); 
+		$(".td6").show();
+		$(".td5").hide();
+  });
+  $(".btnsave1").click(function(){
+ 
+  $(this).parent().parent().find('td>input').each(function(){
+      var $input=$(this);
+	  $input.prev().text($input.val()).show();
+	  $input.hide()
+ });
+  });
+  $(".btnsave2").click(function(){
+		$(this).parent().parent().find('td>input').each(function(){
+		$input=$(this);
+		$input.prev().text($input.val()).show();
+		$input.hide();
+		});
+  });
+  $(".btnsave3").click(function(){
+	$(this).parent().parent().find('td>input').each(function(){
+	$input=$(this);
+	$input.prev().text($input.val()).show();
+	$input.hide();
+	});
+  });
+	
+	function addRow() {
+	var html = '<tr>' +
+			'<td><span class="td7">19</span><input class="td8" type="text" value="1" /></td>'+
+			'<td><span class="td7">17</span><input class="td8" type="text"  value="2" /></td>'+
+
+			'<td><span class="td7">16</span><input class="td8" type="text"   value="3"/></td>'+
+
+			'<td><span class="td7">15</span><input class="td8" type="text"  value="4"/></td>'+
+			'<td><span class="td7">13</span><input class="td8" type="text"  value="5"/></td>'+
+			'<td><button class="btnedit4">edit</button></td>'+
+			'<td><button class="btn9">save</button></td>'+
+			'</tr>';
+
+		
+
+			$(html).appendTo($('#table'))
+			};
+
+			$(".btn7").click(addRow);
+			
+ 			$("#table").on('click','.btnedit4',function(){
+			$(".td7").hide();
+			$(".td8").show();
+		//alert("hi");
+});
+			$("#table").on('click','.btn9',function(){
+			$('.btn9').parent().parent().find('td>input').each(function(){
+			$input=$(this);
+			$input.prev().text($input.val()).show();
+			$input.hide();
+			});
+
+});
+			$(".btndel").click(function(){
+			$(this).parent().parent().remove();
+			//$span=$(this);
+			//$span.remove();
+			//alert("hi");
+			
+
+});
+
+
+ //});
+</script>
+</body>
+</html>
+ 

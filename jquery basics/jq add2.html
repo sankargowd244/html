@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+<script src="../js/jquery.js">
+</script>
+</head>
+
+<body>
+<p><a href="#" class="link">bread</a> <a href="#" class="link">sugar</a> <a href="#" class="link">jam</a></p>
+<select id="list"></select>
+<script>
+$(document).ready(function (){
+	$('.link').click(function(){
+	var item=$(this).text();
+	$('#list').append('<option>' + item + '</option>');
+} );
+});
+</script>
+</body>
+</html>

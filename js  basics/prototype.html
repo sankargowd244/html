@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+<body>
+<p id='demo'></p>
+<script>
+function person(first,last,age,eye){
+this.firstName=first;
+this.lastName=last;
+this.age=age;
+this.eyeColor=eye;
+}
+person.prototype.nationality='english';
+var myFather= new person('john', 'doe', 50, 'blue');
+document.getElementById('demo').innerHTML='my father is' +myFather.nationality;
+
+//objects with prototype
+var empl=function(name){this.name=name}
+var emp1=new empl('san')
+undefined
+emp1
+empl {name: "san"}
+var emp2=new empl('sek')
+undefined
+emp2
+empl {name: "sek"}
+empl.prototype
+Object {constructor: function}
+empl.prototype.play=function(){console.log('prank played')}
+function (){console.log('prank played')}
+empl.prototype.play()
+VM325:1 prank played
+
+emp1.play()
+VM325:1 prank played
+undefined
+emp2.play()
+VM325:1 prank played
+</script>
+</body>
+</html>

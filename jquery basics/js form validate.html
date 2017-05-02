@@ -1,0 +1,21 @@
+ <!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+function validator(){
+  if(document.buckysForm.thebox.checked)
+    alert("hi");
+  else
+    alert("bye");
+
+}
+</script>
+</head>
+<body>
+  <form name="buckysForm">
+<input type="checkbox" name="thebox" />
+<input type="button" value="press me!" onclick="validator()" />
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+// 'hoist' == here we can declare var after use this
+
+x=9;
+console.log(x);
+var x;
+
+//closure== here we can make global variable as loca variable
+ var a=9;
+ function func(){
+ return a*a;
+ }
+ func();  //81
+</script>
+</body>
+</html>

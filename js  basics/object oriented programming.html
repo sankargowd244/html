@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<script>
+//reusable object
+function person(fullName, favColor){
+ this.name=fullName;
+ this.color=favColor;
+ this.greet=function(){
+  console.log("Hello, my name is"+' '+ this.name+ " "+"and my favColor is"+" " +this.color+ ".");
+  }
+}
+// here with one function i used it for for objects
+
+   var san= new person("sanku", "black");
+   san.greet();
+ 
+ var shah= new person("shah", "white");
+   shah.greet();
+ 
+ var mahesh=new person("maheh", "white");
+   mahesh.greet();
+  
+  var sandhya= new person('sand', 'black');
+   sandhya.greet();
+   
+   //anathor type
+  /* var san={
+   name:'sanku',
+   color:'black',
+   greeting:function(){
+   console.log("Hello, my name is"+" "+ san.name+ " "+ "and my color is"+ san.color);
+   }
+   }
+   san.greeting();*/
+   
+   
+   //anathor way
+ /*  function person(name, color){
+   console.log("hi my name is"+ name+"and my color is"+color);
+   }
+   var san={
+   name:"sankar gowd",
+   color:"black"
+   }
+   person(san.name, san.color);
+   person("shah", "white");  */
+   
+   //if condition oop
+   function emp(name, color){
+this.name=name;
+this.color=color;
+this.greet=function(e){
+if(e>5){
+console.log(this.name);
+}else{
+console.log(this.color);
+}
+}
+    }
+var san=new emp('sanku', 'red');
+san.greet(6)
+//VM1402:6 sanku
+undefined
+san.greet(4)
+//VM1402:8 red
+</script>
+
+</body>
+</html>

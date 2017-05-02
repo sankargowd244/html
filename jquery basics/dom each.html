@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.descendants * {
+	display:block;
+	border:2px solid lightgrey;
+	color:lightgrey;
+	padding:5px;
+	margin:15px;
+}
+</style>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("li").each(function(){
+alert($(this).text());
+});
+});
+});
+</script>
+</head>
+<body>
+<button>click</button>
+<ul>
+
+  <li>Milk</li>
+  <li>Soda</li>
+  <li>juice</li>
+  <li>butter</li>
+  
+
+</ul>
+</div>
+
+</body>
+</html>

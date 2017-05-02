@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<script>
+//find age
+function age(bd,bm,by){
+   var td=new Date();
+   tm=td.getMonth();
+   ty=td.getFullYear();
+   tdd=td.getDate();
+   agee=ty-by;
+   if(tm<by){
+   agee--;
+   }
+   if(((tm==bm) &&(tdd<bd))){
+   agee--;
+   }
+   return agee;
+}
+age(30,12,2014);
+//for find missing letter-spacing
+
+function missing(str){
+ var alpha='abcdefghijklmnopqrstuvwxyz';
+ alpha=alpha.split("");
+ str=str.split("");
+ if(str[0] !='a'){
+ return undefined;
+ }
+ for(var i=0; i<str.length; i++){
+ if(str[i]!=alpha[i]){
+ return alpha[i];
+ }
+ }
+ return str;
+}
+missing('abce');
+//for get missing number
+function missing(num){
+ var alpha=[1,2,3,4,5,6];
+
+ for(var i=0; i<num.length; i++){
+ if(num[i]!=alpha[i]){
+ return alpha[i];
+ }
+ }
+ return num;
+}
+missing([1,2,3,5]);
+// for find negative number in array
+var tab=new Array(21,23,34,43,56,65,78,-7);
+var min=tab[0];
+for(var i=0; i<tab.length; i++){
+  if(min>tab[i]){
+  min=tab[i];
+  }
+}
+console.log('min:'+min);
+//for find min and max
+var arr=new Array(1,12,23,34,65,76);
+var min=arr[0];
+var max=arr[0];
+for(var i=0; i<arr.length; i++){
+  if(min>arr[i]){
+  min=arr[i];
+  }
+  if(max<arr[i]){
+  max=arr[i];
+  }
+}
+    console.log('min:'+min+'max:'+max);
+	
+	//find leap year
+	function leap(year){
+	if(year%4==0 && year%100 !==0 || year%400==0){
+	console.log(year+'is leap');
+	return true;
+	}
+	else{
+	console.log(year+'not leap);
+	return false;
+	}
+	}
+	console.log('leap year is'+leap(2012));
+	//factorial
+	function fact(n){
+	  if(n==0){
+	  return 1;
+	  }else{
+	   return n*fact(n-1);
+	  }
+	}
+	console.log(fact(6));
+	//palyndrome
+	function pal(str){
+	str=str.toLowerCase();
+	for(var i=0; i<str.length; i++){
+	str=str.replace('/', '');
+	}
+	var copy=str.split('').reverse().join('');
+	if(copy==str){
+	return true;
+	}
+	return false;
+	}
+	pal('ra/ce car');
+	
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  var start=str.length-(target.length);
+  if(str.substr(start,str.length)==target){
+    return true;
+  }
+  return false;
+}
+
+confirmEnding("Bastian", "n"); 
+//fibonacci
+function fibonacci(n){
+  var fibo = [0, 1];
+  
+  if (n <= 2) return 1;
+
+  for (var i = 2; i <=n; i++ ){
+   fibo[i] = fibo[i-1]+fibo[i-2];
+  }
+
+ return fibo[n];
+} 
+
+fibonacci(12);
+function fibonacci(n){
+  if(n<=1)
+    return n;
+  else
+    return fibonacci(n-1) + fibonacci (n-2);  
+}
+
+ fibonacci(12);
+  
+
+</script>
+<!--<img src="https://assetscdn.paytm.com/images/catalog/view_item/49339/0.jpg"> -->
+</body>
+</html>

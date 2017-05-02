@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.bxslider {
+	position:relative;
+	width:900px;
+	height:200px;
+}
+img {
+	width:700px;
+	height:200px;
+	overflow:hidden;
+	float:left;
+	background:aqua;
+	position:absolute;
+}
+
+</style>
+</head>
+<body>
+<style>
+.fadein { position:relative; height:210px; width:701px; }
+.fadein img { position:absolute; left:0; top:0; }
+</style>
+<div class="fadeIn" tyle='margin-left:130px;height:194px;width:701px;'>
+  <img src="../new/i.jpg" title="Funky roots" />
+  <img src="../new/img.jpg" title="The long and winding road" />
+  <img src="../new/imgg.jpg" title="Happy trees" />
+</div>
+<script src="../js/jquery.js">
+
+</script>
+<script type="text/javascript">
+$(function(){
+$('.fadein img:gt(0)').hide();
+setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');},2000);
+});
+</script>
+</body>
+</html>

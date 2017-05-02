@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        #tcontent{
+            
+            height:auto;
+            overflow-x:scroll;
+            box-sizing:border-box;
+
+        }
+        #tdat{
+            width:100%;
+            overflow-x:scroll;
+           position:fixed;
+           bottom:0;
+           background:antiquewhite;
+        }
+        #tcontent>tr>td{
+            box-sizing:border-box;
+            width:300px;
+            padding:5px;
+        }
+        .updating-section{
+            max-width:1000px;
+            margin:auto;
+            height:auto;
+            background:lightblue;
+             overflow:hidden;
+
+        }
+        .left{
+            width:700px;
+            height:730px;
+            border:1px solid;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+    
+   
+  
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <section class="updating-section">
+        <section class="left">
+            <input type="text" placeholder="search" ng-model="search" />
+            <div class="language">{{path.language}}</div>
+            <div class="language">{{path.id}}</div>
+            <div class="language"><img src="{{path.compiler_icon}}" /></div>
+            <div class="language"><pre><code>{{path.source_code}}</code></pre></div>
+            <div class="language">{{path.title}}</div>
+
+            <div class="language">{{path.compiler_status}}</div>
+        </section>
+
+    </section>
+    <table id="tdat" border="1">
+        <tbody id="tcontent">
+            <tr>
+                <td ng-repeat="path in ob2 | filter:{language:search}" ng-click="showDetails($event, path)"> {{path.$$hashKey}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/angular.js"></script>
+    <script src="../js/script3.js"></script>
+</body>
+</html>

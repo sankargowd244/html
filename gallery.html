@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<style>
+h1 {
+	margin-left:450px;
+	color:red;
+}
+.wrap {
+	width:1000px;
+	margin:auto;
+}
+img {
+	width:300px;
+	height:300px;
+	float:left;
+	margin:5px;
+	border:1px solid black;
+}
+img:hover {
+	visibility:visible;
+	z-index:10;
+	width:310px;
+	height:310px;
+}
+
+img-overlay {
+z-index:18010 !imporatant;
+}
+h3 {
+	clear:both;
+	margin-left:300px;
+}
+</style>
+</head>
+<body>
+<h1>THE IMAGE GALLERY</h1>
+<div class="wrap">
+<img id="im1" src="../new/imgg.jpg">
+<img  id="im2" src="../new/road.jpg">
+<img  id="im3" src="../new/downl.jpg">
+<img  id="im4" src="../new/download.jpg">
+<img src="../new/gre.jpg">
+<img src="../new/green.jpg">
+</div>
+<h3>beautiful image gallery  created by sankar</h3>
+<button type="button">try it</button>
+<script src="../js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+	
+	$("img").blur();
+	$("h3").on("click",function(){
+	$(this).css("background-color","pink");
+	});
+});
+});
+</script>
+
+
+</body>
+</html>

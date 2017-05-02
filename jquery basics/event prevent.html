@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("div").click(function(event){
+event.preventdefault();
+alert("was preventdefault() called:" +event.isdefaultprevented()");
+});
+});
+
+
+</script>
+</head>
+<body>
+
+<a href="http://w3schools.com/">Go to W3Schools.com</a>
+<p>trigger the select event for</p>
+<p>alkgnzlnclsnclsnv</p>
+
+</body>
+</html>

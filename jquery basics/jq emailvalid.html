@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+<script src="../js/jquery.js">
+</script>
+</head>
+
+<body>
+
+Email:<input id="email" type="text"/><span id="email-feedback"></span>
+<script>
+$("#email").focusin(function (){
+	$("#email-feedback").text("Go on, enter a valid email address...");
+}).blur(function(){
+	$("#email-feedback").text("");
+} );
+</script>
+</body>
+</html>

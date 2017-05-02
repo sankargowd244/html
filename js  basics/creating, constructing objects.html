@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+
+</style>
+
+</head>
+<body>
+<p id="demo"></p>
+<script src="../js/jquery.js">
+</script>
+<script>
+//regular objects
+var emp1={};
+emp1.firstName='san';
+emp1.lastName='gowd';
+emp1.gender='male';
+emp1.designation='ui developer';
+
+var emp2={};
+  emp2.firstName='sekar';
+emp1.lastName='gowd';
+emp1.gender='male';
+emp1.designation='sap developer';
+
+//objects with using function constructor
+
+//with this constructor functio we can built number of objects dynamically
+function createEmpObject(firstName,lastName,male, designation){
+  //var this={};
+  this.firstName=firstName;
+  this.lastName= lastName;
+  this.gender= gender;
+  this.designation= designation;
+  //return this;
+  
+}
+var emp3= new createEmpObject('san','gowd','male','ui dev')
+</body>
+</html>

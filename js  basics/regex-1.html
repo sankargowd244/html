@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+
+</style>
+
+</head>
+<body>
+<input type='text' id='txt' style='width:250px'><br><br>
+<input type='button' value='process string' onclick='processString()' style='width:250px'>
+<br><br>
+<textarea id='txtArea' rows='40' cols='30'></textarea>
+<script>
+//regex are used for pattern matching and search-replacce functions on text
+       function processString(){
+      
+	  document.getElementById('txtArea').value='';
+     var inputString=document.getElementById('txt').value;
+     var result=inputString.match(/\d+/g);
+   if(result !=null){
+   for(var i=0; i<result.length; i++){
+   document.getElementById('txtArea').value+= result[i]+'\r\n';
+   }
+   }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+
+</style>
+
+</head>
+<body>
+<p id="demo"></p>
+<script src="../js/jquery.js">
+</script>
+<script>
+/*var employees=[
+{
+"firstName":"san",
+"lastName":"burra"
+},
+{
+"firstName":"shahida",
+"lastName":"t"
+},
+{
+"firstName":"ram",
+"lastName":"buraa"
+}
+];
+document.getElementById('demo').innerHTML=
+employees[2].firstName+""+employees[2].lastName;*/
+/*var text='{"employees":['+
+'{"firstName":"san", "lastName":"doe"},'+
+'{"firstName":"shah","lastName":"t"},'+
+'{"firstName":"mahi","lastName":"p"}]}';
+obj=JSON.parse(text);
+document.getElementById("demo").innerHTML=
+obj.employees[1].firstName+" "+obj.employees[1].lastName;*/
+/*var xmlhttp= new XMLHttpRequest();
+var url = "myTutorials.txt";
+
+xmlhttp.onreadystatechange = function(){
+if(xmlhttp.readyState ==4&& xmlhttp.status == 200){
+var myArr = JSON.parse(xmlhttp.responseText);
+myFunction(myArr);
+}
+};
+xmlhttp.open("GET",url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+var out = "";
+var i;
+for(i=0; i<arr.length; i++){
+out+= '<a href="' + arr[i].url + '">' +
+arr[i].display +' </a><br>' ;
+}
+document.getElementById("demo").innerHTML=out;
+}*/
+
+/*var myArray = [ {
+"display": "Javascript Tutorials",
+"url": "http:/www.w3schools.com/js/default.asp" },
+{
+"display": "HTML Tutorial",
+"url": "http:/w3schools.com/html/default.asp" 
+},
+{
+"display": "CSS Tutorial",
+"url": "http:/w3schools.com/css/default.asp"
+}
+];
+myFunction(myArray);
+
+function myFunction(arr){
+var out= "";
+var i;
+for(i=0; i<arr.length; i++){
+out + = '<a href="' + arr[i].url + '">' +
+arr[i].display + '</a><br>';
+}
+document.getElementById("demo").innerHTML = out;
+}*/
+
+function myFunction(arr) {
+var out = "";
+var i;
+for(i=0; i<arr.length; i++){
+out += '<a href="' + arr[i].url + '">' +
+arr[i]display + '</a><br>';
+}
+document.getElementById("demo").innerHTML= out;
+}
+</script>
+<script src="myTutorials.js"></script>
+
+
+</body>
+</html>

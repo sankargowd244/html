@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+
+var person1={name:' san', age:25};
+var person2={name:' mahi', age:24};
+var hello=function(){
+alert('hi,'+this.name+'and I am '+this.age);
+};
+var bye=function(){
+alert('hi,'+this.name+'and I am '+this.age);
+};
+//call 
+hello.call(person1);
+bye.call(person2);
+//apply
+hello.apply(person1);
+bye.apply(person2);
+
+//anathor example
+ function theFunction(name, profession) {
+    console.log("My name is " + name + " and I am a " + profession + ".");
+}
+theFunction("John", "fireman");
+theFunction.apply(undefined, ["Susan", "school teacher"]);
+theFunction.call(undefined, "Claude", "mathematician");
+theFunction.call(undefined, ...["Matthew", "physicist"]); 
+// used with the spread operator
+
+// Output: 
+
+// My name is John and I am a fireman.
+// My name is Susan and I am a school teacher.
+// My name is Claude and I am a mathematician.
+// My name is Matthew and I am a physicist.
+</script>
+</body>
+</html>

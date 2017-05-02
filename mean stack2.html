@@ -1,0 +1,122 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+body{
+background:#eeeeee;
+}
+  </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../js/angular.js"></script>
+
+</head>
+<body ng-app="core">
+<nav class="navbar navbar-default">
+<h3 class="text-muted" style="float:left">App makers</h3>
+<ul class="nav navbar-nav" style="float:right">
+<li><a href="#">SignIn</a></li>
+<li><a href="#">SignUp</a></li>
+</ul>
+</nav>
+  <section data-ng-controller = "HomeController">
+    <div class="row">
+      <div class="col-sm-6" ng-repeat='alert in alerts'>
+        <div class="row">
+          <div class="col-xs-2">
+          <h1>  <button type="button" class="btn" ng-class='alert.color'>
+              <i class="glyphicon" ng-class='alert.icon'></i></button></h1>
+          </div>
+          <div class="col-xs-10">
+            <h1>{{alert.total}}</h1>
+          </div>
+        </div>
+		
+      <div class="row">
+<div class="col-xs-10 col-xs-offset-2 ">
+<span class="text-muted">{{alert.description}}</span>
+</div>
+
+      </div>
+      </div>
+  </div>
+  </section>
+  <!--<nav class="navbar navbar-default">
+   <h3 class="text-muted" style="float:left">App makers</h3>
+   <ul class="nav navbar-nav" style="float:right">
+   <li><a href="#">Sign in</a></li>
+   <li><a href="#">Signup</a></li>
+   </ul>
+  </nav>
+  <section ng-controller="homeController">
+  <div class="row">
+  <div class="col-sm-6" ng-repeat="alert in alerts">
+  <div class="row">
+  <div class="col-xs-2">
+  <h1><button type="button" class="btn" ng-class="alert.color">
+  <i class="glyphicon" ng-class="alerticon"></i>
+  </button></h1>
+  </div>
+  <div class="col-xs-10">
+  <h1> {{alert.total}}</h1>
+  </div>
+  <div class="row">
+  <div class="col-xs-10 col-xs-offset-2">
+  <span class="text-muted"> {{alert.description}} </span>
+  </div>
+  </div>
+  </div>
+  
+  
+  </section>
+  -->
+   <script>
+'use strict';
+angular.module('core',[]).controller('HomeController',['$scope', function($scope){
+//  $scope.athentication=Athentication;
+  $scope.alerts=[
+    {
+    icon:' glyphicon-user',
+    color: 'btn-success',
+    total: 20408,
+    description: 'TOTAL CUSTOMERS',
+  },
+  
+  {
+  icon:' glyphicon-user',
+  color: 'btn-primary',
+  total: 83828,
+  description: 'UPCOMMING EVENTS',
+},
+{
+icon:' glyphicon-off',
+color: 'btn-warning',
+total: 527,
+description: 'NEW CUSTOMERS',
+},
+{
+icon:' glyphicon-flag',
+color: 'btn-danger',
+total: 85,
+description: 'EMAIL SENT',
+},
+{
+icon:' glyphicon-film',
+color: 'btn-info',
+total: 268,
+description: 'FOLLOW UPS REQUIRED',
+},
+{
+icon:' glyphicon-film',
+color: 'btn-success',
+total: 348,
+description: 'REFFERALS TO MODERATE',
+}
+];
+}]);
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../js/script4.js"></script>
+    <script src="../js/angular.js"></script>
+</head>
+<body>
+    <!--<div class='container-fluid' >
+        <div class='row-fluid'>
+            <div class='span2'>
+                Search: <input ng-model='searchBar'>
+                Sort by:
+                <select ng-model='orderProp'>
+                    <option value='name'>Alphabetical</option>
+                    <option value='age'>Newest</option>
+                </select>
+                You selected the phones to be ordered by: {{orderProp}}
+            </div>
+
+            <div class='span10'>
+                <select ng-model='limit'>
+                    <option value='5'>Show 5 per page</option>
+                    <option value='10'>Show 10 per page</option>
+                    <option value='15'>Show 15 per page</option>
+                    <option value='20'>Show 20 per page</option>
+                </select>
+                <ul class='phones'>
+                    <li class='thumbnail' ng-repeat='phone in phones | filter:searchBar | orderBy:orderProp | limitTo:limit'>
+                        <a href='#/phones/{{phone.id}}' class='thumb'><img ng-src='{{phone.imageUrl}}'></a>
+                        <a href='#/phones/{{phone.id}}'>{{phone.name}}</a>
+                        <p>{{phone.snippet}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+    <div ng-app="myApp" ng-controller="MyCtrl">
+        <input ng-model="q" id="search" class="form-control" placeholder="Filter text">
+        <select ng-model="pageSize" id="pageSize" class="form-control">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+        <ul>
+            <li ng-repeat="item in data | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize">
+                {{item}}
+            </li>
+        </ul>
+        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            Previous
+        </button> {{currentPage+1}}/{{numberOfPages()}}
+        <button ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+            Next
+        </button>
+    </div>
+</body>
+</html>

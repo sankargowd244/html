@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+
+</style>
+</head>
+<body>
+<input type='button' value='click me' id='btn'/>
+<input type='button' value='remove event handler' onclick='removeEventHandlers()'/>
+<script>
+btn.addEventListener('mouseover', changeColorMouseOver);
+btn.addEventListener('mouseout', changeColorMouseOut);
+
+function changeColorMouseOver(){
+this.style.background='red';
+this.style.color= 'pink';
+}
+
+function changeColorMouseOut(){
+this.style.background ='black';
+this.style.color  = 'white';
+}
+
+function removeEventHandlers(){
+  btn.removeEventListener('mouseover', changeColorMouseOver);
+  btn.removeEventListener('mouseout', changeColorMouseOut);
+}
+</script>
+</body>
+</html>

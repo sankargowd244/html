@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p class="intro">This paragraph has class "intro".</p>
+<p>This is a paragraph.</p>
+<p class="demo">This paragraph has class "demo".</p>
+<p>This is another paragraph.</p>
+<p class="end">This paragraph has class "end".</p>
+
+
+<h1>Welcome to My Web Page</h1>
+<h2>Nice to meet you</h2>
+
+<div>Very nice indeed.</div>
+
+<p>How are you?</p>
+<p>I'm fine, <span>thanks.</span></p>
+
+<h1>Welcome to My Web Page</h1>
+
+<table border="1">
+  <tr>
+    <th>Company</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+</table>
+
+<h1>This is a heading in body</h1>
+
+<p>The first paragraph in body.</p>
+<p>The second paragraph in body (and the 3rd child element in body).</p>
+
+<div style="border:1px solid;">
+  <span>This is a span element in div</span>
+  <p>The first paragraph in div.</p>
+  <p>The second paragraph in another div (and the 3rd child element in this div).</p>
+  <p>The last paragraph in div.</p>
+</div><br>
+
+<div style="border:1px solid;">
+  <p>The first paragraph in another div.</p>
+  <p>The second paragraph in another div.</p>
+  <p>The last paragraph in another div (and the 3rd child element in this div).</p>
+</div>
+
+<p>The last paragraph in body.</p>
+
+<h1>This is a heading in body</h1>
+<p>The first paragraph in body.</p>
+<p>The second paragraph in body.</p>
+
+<div style="border:1px solid;">
+  <span>This is a span element in div</span>
+  <p>The first paragraph in div.</p>
+  <p>The second paragraph in another div.</p>
+  <p>The last (third) paragraph in div.</p>
+</div><br>
+
+<div style="border:1px solid;">
+  <p>The first paragraph in another div.</p>
+  <p>The second paragraph in another div.</p>
+  <p>The last (third) paragraph in another div.</p>
+</div>
+
+<p>The last (third) paragraph in body.</p>
+
+
+<h2>What will $("div + p") select?</h2>
+
+<div style="border:1px solid black;padding:10px;">This is a div element.</div>
+<p>This p element is next to a div element.</p>
+<p>This is another p element.</p>
+
+<div style="border:1px solid black;padding:10px;">
+  <p>This is a p element inside a div element.</p>
+</div>
+
+<h2>This is a heading next to a div element.</h2>
+<p>This is a p element (This p element will not be selected, because the h2 element above is the "next" element of the div element).</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+	$(".intro,.demo,.end").css("background","pink");
+	$("h2,div,p").css("color","pink");
+	$("p:last").css("color","green");
+	$("tr:odd").css("color","red");
+	$("p:nth-child(2)").css("color","purple");
+	$("p:nth-of-type(2)").css("background","red");
+	$("div+p").css("color","blue");
+	$("p:eq(1)").css("color","blue");
+});
+//stringify and parse
+JSON.stringify({}); //'{}'
+JSON.stringify(true); // 'true'
+JSON.stringify('foo'); // 'foo'
+JSON.stringify([1, 'false', false]); // '[1,"false" false]'
+JSON.stringify({x:5});   //'{"x":5}'
+JSON.STRINGIFY(new Date(2006, 0,2, 15, 4,5)) //'"2006-01-02T15:04:05.000Z"'
+JSON.stringify({x:5, y:6}); //'{"x":5, "y":6}' or '{"y":6, "x":5}'
+// for parse
+JSON.parse('{}'); // {}
+JSON.parse('true');  // true
+JSON.parse('[1,3, "false"]');  //[1,3,,"false"]
+JSON.parse('null');  //null
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+
+<link rel = "stylesheet" 
+         href = "//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$("input").keypress(function(){
+$("span").html();
+});
+});
+//for alert box
+function warn(){
+	alert("this is warning message");
+	document.write("this is warning message");
+	console.log("hi modijee");
+}
+// for confirm box
+function get(){
+	var ret=confirm("do u want to return value?");
+	if(ret==true){
+	document.write("user wants to return the val");
+	return true;
+	}
+	else{
+	document.write("user don't want to return val");
+	return false;
+	}
+}
+function get(){
+	var ret=prompt("enter your name:", "your name here");
+	document.write("you have entered name");
+}
+function redirect(){
+	window.location="https://www.tutorialspoint.com/javascript/javascript_page_redirect.htm";
+	
+}
+$("input").click(function(){
+document.write("you will be redirect in 10 sec");
+setTimout('redirect()', 10000);
+});
+$(document).ready(function(){
+		$("li").eq(3).addClass("selected");
+		$("p").find("span").addClass("selected");
+});
+$(function(){
+	$("#progressbar").progressbar({
+	value:40
+	});
+});
+</script>
+<style>
+.selected{color:red;}
+#progressbar {
+  background-color: #f3f3f3;
+  border: 0;
+  height: 18px;
+  border-radius: 9px;
+  
+}
+</style>
+</head>
+<body>
+
+Enter your name: <input type="text">
+
+<p>Keypresses: <span>0</span></p>
+<form>
+<input type="button" value="alert" onclick="warn()">
+<input type="button" value="confirm" onclick="get()">
+<input type="button" value="prompt" onclick="get()">
+<input type="button" value="redirect" onclick="redirect()">
+<input type="button" value="print" onclick="window.print()">
+</form>
+<p>This is 1st paragraph and <span>THIS IS RED</span></p>
+      <p>This is 2nd paragraph and <span>THIS IS ALSO RED</span></p>
+<div>
+         <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+            <li>list item 5</li>
+            <li>list item 6</li>
+         </ul>
+      </div>
+<div id="progressbar" value="10" max="40"></div>
+
+
+</body>
+</html>

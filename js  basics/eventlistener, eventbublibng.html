@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.divstyle{
+  display:table-cell;
+  border: 5px solid black;
+  padding: 20px;
+  text-align:center;
+}
+
+
+</style>
+</head>
+<body>
+ <div id="div1" class='divstyle'>
+   DIV 1
+     <div id="div2" class='divstyle'>
+        DIV 2
+		<div id="div3" class='divstyle'>
+        DIV 3
+     </div>
+    </div>
+   </div>
+
+<script>
+
+
+var divs=document.getElementsByTagName('div');
+
+    for(var i=0; i<divs.length; i++){
+	divs[i].addEventListener('click', clickHandler, true);
+	}
+	function clickHandler(){
+	
+	//event.stopPropagation();
+	alert(this.getAttribute('id')+' '+ 'click event handled');
+	}
+</script>
+</body>
+</html>

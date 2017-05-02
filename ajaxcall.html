@@ -1,0 +1,40 @@
+<!Doctype html>
+<head></head>
+<body>
+<button>Send an HTTP GET request to a page and get the result back</button>
+<!-- form attrs  -->
+<form action ='javascript:alert("goog");'>
+<input type='email' required placeholder='email address'>
+<input type='submit'>
+</form>
+<ol contenteditable onblur="alert(this.innerHTML);">
+  <li> </li>
+</ol>
+<ol onblur="localStorage.setItem('mylist', this.innerHTML);"
+    contenteditable>
+
+  <li> </li>
+</ol>
+<script src="../js/jquery.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("http://www.w3schools.com/jquery/jquery_ajax_get_post.asp", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+		
+		$.ajax({
+			url:'http://hackerearth.0x10.info/api/ctz_coders?type=json&query=list_submissions&page=1',
+			success:function(data){
+				console.log(data);
+			}
+		});
+    });
+});
+</script>
+
+
+</body>
+</html>
+

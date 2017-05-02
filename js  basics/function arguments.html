@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+// different args
+ function do(str){
+ alert('string arguments:'+ arguments[0]);
+ }
+ do('hello');
+ function do(str){
+ alert('string arguments:'+ do.arguments[0]);
+ }
+ do('hello');
+ function do(str){
+ alert('string arguments:'+ window.do.arguments[0]);
+ }
+ do('hello');
+ function do(str){
+ alert('string arguments:'+ window.['do'].arguments[0]);
+ }
+ do('hello');
+ 
+ function do(str1, str2){
+ alert(arguments[0]+' '+arguments[1]);
+ }
+ do('Hello', 'world');
+ 
+ function do(){
+ for(var i=0; i<arguments.length; i++){
+alert( arguments[i]);
+ }
+ }
+ do('hello', 'world', 200, true);
+ function do(){
+ alert(arguments.callee);
+ }
+ function do(){
+ var result=0;
+ for(var i=0; i<arguments.length; i++){
+ result+= arguments[i];
+ }
+ return result;
+ }
+ do(1,2,3,4,5,6,7);
+</script>
+</body>
+</html>

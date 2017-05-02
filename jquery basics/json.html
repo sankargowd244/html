@@ -1,0 +1,46 @@
+ <!doctype html>
+<html>
+<head>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("#stringify").click(function() {
+	var person= new Object();
+	person.firstName= $("#firstName").val();
+	
+	person.lastName=$("#lastName").val();
+	
+	var jsonData= JSON.stringify(person);
+	//alert(jsonData);
+	$("#jsonData").val(jsonData)
+});
+	$("#parse").click(function(){
+	var jsonData=$("#jsonData").val();
+	var person=JSON.parse(jsonata);
+	$("#first-name").val(person.firstName);
+	$("#last-name").val(person.lastName);
+})
+})
+</script>
+</head>
+<body>
+<div>
+	<lable for="firstName">firstName</lable>
+	<input type="text" class="formControl" id="firstName">
+</div>
+<div>
+	<lable for="lastName">lastName</lable>
+	<input type="text" class="formControl" id="lastName">
+</div>
+<div>
+	JSON:
+</div>
+<div>
+		<textArea class="formControl" id="jsonData" cols="60"></textArea>
+</div>
+<div>
+	<button type="text" class="btn" id="stringify">stringify</button>
+	<button type="text" class="btn" id="parse">parse</button>
+</div>
+</body>
+</html>

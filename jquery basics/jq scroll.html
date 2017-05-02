@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#text {
+	width:100px;
+	height:200px;
+}
+</style>
+<script src="../js/jquery.js">
+</script>
+</head>
+
+<body>
+<textarea id="text">ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkkkkkkkkkkmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</textarea>
+<div id="feedback"></div>
+<script>
+$(document).ready(function (){
+	$('#text').scroll(function(){
+	var scroll_top=$(this).scrollTop();
+	$('#feedback').text('currently at position: ' + scroll_top);
+	} );
+} );
+</script>
+</body>
+</html>

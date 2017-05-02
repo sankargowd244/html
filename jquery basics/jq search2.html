@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#search").on("keyup", function() {
+    var value = $(this).val();
+
+    $("table tr").each(function(index) {
+        if (index != 0) {
+
+            $row = $(this);
+
+            var id = $row.find("td:first").text();
+
+            if (id.indexOf(value) != 0) {
+                $(this).hide();
+            }
+            else {
+                $(this).show();
+            }
+        }
+    });
+});
+});
+</script>
+</head>
+<body>
+<table>
+    <tr><th>Unique ID</th><th>Random ID</th></tr>
+    <tr><td>214215</td><td>442</td></tr>
+    <tr><td>1252512</td><td>556</td></tr>
+    <tr><td>2114</td><td>4666</td></tr>
+    <tr><td>3245466</td><td>334</td></tr>
+    <tr><td>24111</td><td>54364</td></tr>
+</table>
+
+</body>
+</html>

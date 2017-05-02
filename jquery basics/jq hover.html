@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="../js/jquery.js"></script>
+<script>
+$(".hover").mousemove(function(e){
+	var hovertext=$(this).attr('hovertext');
+	$("#hoverdiv").text(hovertext).show();
+	$("#hoverdiv").css('top', e.clienty+10).css('left', e.clientx+10);
+});
+
+</script>
+</head>
+<body>
+
+
+
+<div id="hoverdiv"></div>
+<p><a class="hover" href="http://www.google.co.uk" hovertext="google, a powerfull search engine">google</a></p>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.loader {
+	position:relative;
+	
+}
+ul li {
+	list-style:none;
+	display:inline;
+	padding:20px;
+	background:red;
+
+}
+
+.loader {
+	width:600px;
+	height:100px;
+	background:lightgrey;
+	position:relative;
+	top:30px;
+	display:none;
+	
+	
+}
+</style>
+</head>
+<body>
+<div class="loader">
+<ul >
+<li>dhfdlkflk
+
+
+
+
+<ul>
+<li>sakjksj</li>
+<li>sadk</li>
+<li>kjshkjs</li></ul>
+
+<ul><li>jsgdk</li>
+<li>qwoidhoqiw</li>
+<li>kjdhkjwd</li></ul>
+
+
+<ul><li>wldhlwdh</li>
+<li>wkdkwjd</li>
+<li>kwdhkjd</li></ul>
+</div></div></li>
+<li>saklks</li>
+<li>saklks</li>
+</li>
+</ul>
+</div>
+<script src="../js/jquery.js">
+
+</script>
+<script>
+$(document).ready(function(){
+$('.loader ul li').hover(function() {
+	$(this).children('ul').stop(true, false, true).fadeToggle(300);
+});
+});
+</body>
+</html>

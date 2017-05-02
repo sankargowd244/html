@@ -1,0 +1,376 @@
+ <!doctype html>
+<html>
+<head>
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+#header{
+	width:100%;
+	height:63px;
+	padding:5px 0;
+	background:none repeat scroll 0 0 #ffffff;
+	box-shadow:0 10px 6px -6px; #9b9b9b;
+	z-index:20;
+	top:0;
+	position:fixed !important;
+	opacity:0.7;
+}
+
+#logo {
+	text-align:center;
+	padding:5px 0;
+	width:50%;
+	float:left;
+	
+}
+.rightnav {
+	width:50%;
+	float:right;
+	height:63px;
+	
+}
+.rightnav li {
+	list-style:none;
+	font-size:14px;
+	color:#015291;
+}
+.rightnav ul li {
+	padding:10px 8px;
+	display:inline;
+	text-decoration:none;
+	position:relative;
+	font-weight:bold;
+	bottom:-20px;
+}
+.rightnav ul li ul{
+		display:none;
+		position:absolute;
+		left:0;
+		border:1px solid black;
+	    width:150px;
+		padding:10px 5px;
+}
+.rightnav ul li ul li{
+	color:black;
+    line-height: 60px;
+    border-bottom: 1px solid black;
+}
+.rightnav ul li:hover ul {
+	display:block;
+	background:white;
+
+}
+
+.rightnav ul li:hover {
+	background:#015291;
+	color:white;
+}
+.content {
+	width:940px;
+	margin:auto;
+	padding-top:95px;
+}
+#top {
+	float:left;
+	color:#015291;
+	font-weight:bold;
+}
+#head {
+	margin:auto;
+}
+#row {
+	margin-left:200px;;
+	font-size:48px;
+	padding:10px;
+	font-weight:bold;
+}
+#column1 {
+	width:300px;
+	padding:0px;
+	float:left;
+	margin-top:40px;
+}
+#column2 {
+	width:305px;
+	padding:2px;
+	float:left;
+}
+#column3 {
+	margin-top:40px;
+	width:300px;
+	padding:2px;
+	float:left;
+}
+#topic1 {
+	background:dark grey;
+	clear:right;
+	font-size:20px;
+	color:dark grey;
+	margin-bottom:8px;
+}
+#topic2 {
+	background:dark grey;
+	clear:right;
+	font-size:20px;
+	color:dark grey;
+	margin-bottom:8px;
+}
+#topic3 {
+	background:dark grey;
+	clear:right;
+	font-size:20px;
+	color:dark grey;
+	margin-bottom:8px;
+}
+#topic4 {
+	background:dark grey;
+	clear:right;
+	font-size:20px;
+	color:dark grey;
+	margin-bottom:8px;
+}
+#topic5 {
+	background:dark grey;
+	clear:right;
+	font-size:20px;
+	color:dark grey;
+	margin-bottom:8px;
+}
+#topic6 {
+	background:dark grey;
+	clear:right;
+	font-size:20px;
+	color:dark grey;
+	margin-bottom:8px;
+}
+#pic {
+	margin:8px;
+}
+#content1 {
+	width:940px;
+	height:640px;
+	margin:auto;
+}
+#content2 {
+	width:940px;
+	margin: 0 auto;
+	font-size:48px;
+	margin-left:200px;
+}
+.content3 {
+	width:940px;
+	height:630px;
+	margin:auto;
+}
+#box1 {
+	width:450px;
+	height:290px;
+	margin:8px;
+	float:left;
+	border:1px solid grey;
+	border-radius:10px;
+}
+#box2 {
+	width:450px;
+	height:290px;
+	margin:8px;
+	float:left;
+	border:1px solid grey;
+	border-radius:10px;
+}
+#box3 {
+	width:450px;
+	height:290px;
+	margin:8px;
+	float:left;
+	border:1px solid grey;
+	border-radius:10px;
+}
+#box4 {
+	width:450px;
+	height:290px;
+	margin:8px;
+	float:left;
+	border:1px solid grey;
+	border-radius:10px;
+}
+h3 {
+	margin:20px;
+	margin-left:100px;
+}
+.footer {
+	background:#e1e1e1;
+	height:300px;
+	width:100%;
+	padding-top:20px;
+	
+
+}
+#menu1 {
+	width:940px;
+	height:50px;
+	background:#42423d;
+	border-radius:5px;
+	top:15px;
+	margin:10px auto;
+	margin-top:20px;
+}
+#copy {
+	margin-left:15px;
+	padding-top:15px;
+	top:15px;
+	color:white;
+	font-size:17px;
+	float:left;
+	widt:50%;
+}
+#txt4 {
+	
+	width:940px;
+	font-size:26px;
+	padding-left:112px;
+	margin:auto;
+	
+}
+#txt5{
+	width:250px;
+	left:400px;
+	height:50px;
+	text-align:center;
+	margin: auto;
+	background:#429c18;
+	display:block;
+	font-size:26px;
+	font-weight:bold;
+	padding:20px 20px 5px 5px;
+	color:white;
+}
+#rightmenu {
+	width:50%;
+	float:right;
+}
+#menu3 li {
+	list-style:none;
+	color:#878787;
+	display:inline;
+	margin-left:15px;
+	padding:20px 15px 5px 10px;
+	font-size:18px;
+}
+#menu3 li:hover {
+	color:white;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<div id="logo"><img src="myfridaylogo.png"></div>
+<div class="rightnav">
+<ul>
+<li>SOLUTIONS
+<ul>
+<li>overview</li>
+<li>testimonials</li>
+<li>operational Performance</li>
+</ul>
+</li>
+<li>PRODUCT
+<ul>
+<li><span>overview</span></li>
+<li>air Framework</li>
+</ul>
+</li>
+<li>PARTNERS
+<ul>
+<li>our Partners</li>
+<li>bacome A Partner</li>
+</ul>
+</li>
+<li>RESOURCES
+<ul>
+<li>factsheets</li>
+<li>demo</li>
+<li>press</li>
+</ul>
+</li>
+<li>ABOUT
+<ul>
+<li>company</li>
+<li>careers</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="content">
+
+<div id="top"><h2>Client Solutions Overview</h2></div><br><br>
+<div id="head"><div id="row"><span style="color:#015291"><strong>Key enterprise</strong></span> Benifits</div></div><br><br><br>
+<div id="content1">
+
+<div id="column1"><br>
+<div id="topic1">
+<input type="radio" style="width:20px; height:20px;">
+&nbspMove the Metric</div><p style="text-align:justify; font-weight:normal;">Businesses created awareness and engagement around operational metrics, critical to their service model on Myfriday. Enterprises have found that the mean score of the metric can be moved by as much as 25% through this approach.</p>
+<div id="topic2">
+<input type="radio" style="width:20px; height:20px">&nbsp Reduce the Range</div><p style="text-align:justify;">By working on the outliers and the average into a narrower, manageable band, organizations can plan their next wave of metric improvement in a collaborative manner.</p>
+<div id="topic3">
+<input type="radio" style="width:20px; height:20px">&nbsp
+Increase Manager Bandwidth</div><p style="text-align:justify;">Myfriday’s AIR framework automates insight delivery, both to managers and first line employees. This minimizes the time spent on data crunching. Both managers and first line employees are on the same page, allowing them to focus on coaching and guidance when they meet.</p></div>
+<div id="column2"><div id="pic"><img src="new/phone.png"style="width:300px; height:625px;"></div></div>
+
+<div id="column3">
+<div id="topic4">
+<input type="radio" style="width:20px; height:20px">
+&nbsp Consistancy in communication</div><p style="text-align:justify;">Myfriday’s collaborative engagement toolkit allows for creation and cross pollination of insights and actions across the organization. This predictable approach improves employee morale and participation in organizational performance improvement initiatives.</p>
+<div id="topic5">
+<input type="radio" style="width:20px; height:20px">
+&nbsp Rewards and Incentives</div><p style="text-align:justify;">Myfriday ensures objectivity in reward distribution by aligning the rewards to improvement in metrics through predefined business rules. This approach is well received by front line employees and managers as it allows them to focus on business outcomes with clarity.</p>
+<div id="topic6">
+<input type="radio" style="width:20px; height:20px">
+&nbsp Measure effective of Initiatives</div><p style="text-align:justify;">Myfriday enables enterprises to go beyond performance campaigns to measure their effectiveness and fine tune their future approach.</p>
+</div>
+</div><br>
+<div id="content2">
+<span style="color:#015291;"><strong>Case Studies</strong></span>-Get to know more
+</div><br>
+<div class="content3">
+<div id="box1"><h3>Operational performance</h3>
+<p style="text-align:justify; margin:15px;line-height:25px;">A large corporation had challenges in managing its operations as the absenteeism and attrition was severely impacting its availability metrics. Close study revealed that their managers did not get enough time to coach them to enhance performance…</p>
+<button type="text" style="background:#015291; color:white; font-size:18px; float:right; margin:15px; width:150px; height:45px; border:none;border-radius:5px;" onclick="page open">Read More</button>
+</div>
+<div id="box2"><h3>Employee Engagement</h3>
+<p style="text-align:justify; margin:15px;line-height:25px;"> A global 100 company managed their only shared services center for 5000+ employees out of Bangalore. The center manages strategic initiatives for multiple business lines across operations around the world. All the internal and external platforms…</p>
+<button type="text" style="background:#015291; color:white; font-size:18px; float:right; margin:15px; width:150px; height:45px; border:none;border-radius:5px;" onclick="page open">Read More</button>
+</div>
+<div id="box3"><h3>Reward distribution</h3>
+<p style="text-align:justify; margin:15px;line-height:25px;">A large BPO faced the challenge of rewards reaching only a few employees. Nearly 30% of the employee pay came from variable pay and 5% of the gross margin was distributed as rewards.Reasons were the target and thresholds used for… </p>
+<button type="text" style="background:#015291; color:white; font-size:18px; float:right; margin:15px; width:150px; height:45px;border:none;border-radius:5px;" onclick="page open">Read More</button>
+</div>
+<div id="box4"><h3>Sales Effectiveness</h3>
+<p style="text-align:justify; margin:15px;line-height:25px;">A large pharmaceutical managed a sales organisation that involved regional managers and Feet on Street (FOS) sales representatives across the many cities and towns. These representatives interacted with doctors and hospitals to…</p>
+<button type="text" style="background:#015291; color:white; font-size:18px; float:right; margin:15px; width:150px; height:45px; border:none;border-radius:5px;" onclick="page open">Read More</button>
+</div>
+</div>
+</div>
+<div class="footer">
+<div id="menu1">
+<div id="copy">@2015.All rights Reserved</div>
+<div id="rightmenu">
+ <ul id="menu3">
+ <li>About</li>
+ <li>careers</li>
+ <li>Blog</li>
+ <li>Contact</li>
+ </ul>
+ </div>
+</div><br><br>
+<div id="txt4">Want to review your perfomance? schedule a demo today to find out.</div><br>
+<br>
+<div id="txt5">Request a Demo</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#check{
+	display:block;
+}
+#ul{
+list-style:none;
+}
+</style>
+
+<script
+src="../../js/jquery.js"></script>
+
+</head>
+<body>
+<input type='button' id='add'/ value='add'>
+<input type='button' id='select'/ value='select'>
+<input type='button' id='save'/ value='save'>
+<input type='button' id='deleet'/ value='delete'>
+<div id='in'>
+<ul id="ul">
+<li></li>
+</ul>
+</div>
+<script>
+$(document).ready(function(){
+var arr=['one','two','three', 'four','five', 'six', 'seven'];
+    var text='';
+
+  $('#add').click(function(){
+  for(var i=0; i<arr.length; i++){
+  text+=arr[i];
+  $("#ul").append('<li>'+'<input id="check" type="checkbox" />'+text+'</li>');
+  }
+  });
+  $('#delete').click(function(){
+  $('#in:last-child').remove();
+  });
+  $("#select").click(function(){
+  $("#check").each(function(){this.checked= true;});
+  //$("#check").prop('checked', true);
+  });
+  });
+</script>
+
+</body>
+</html>

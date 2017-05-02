@@ -1,0 +1,191 @@
+
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+input[type=text] {
+    padding:5px;
+    border:2px solid #ccc;
+                margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+select {
+      padding:5px;
+    border:2px solid #ccc;
+                margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+#submit:hover {
+    border: none;
+    background:blue;
+    box-shadow: 0px 0px 1px #777;
+}
+#container{
+                width:500px;
+                height:500px;
+}
+label,input,select{
+                border-color:blue;
+                float:left;
+                width:50%;
+}
+.required label:after{
+                content:"*" ;
+    color:red
+}
+</style>
+</head>
+<body>
+<div id="container" ng-app="myApp" ng-controller="MyController">
+<form novalidate name="myForm">
+    <div class="row required">
+                <div><label>First Name</label></div>
+                <div><input type="text" name="fname" ng-model="fname" ng-required="true" ng-focus="focused=true" required/></div>
+                <span ng-show="myForm.fname.$invalid && myForm.fname.$dirty">Please enter your name!</span>
+    </div>
+    <div class="row required">
+                <div><label>Last Name</div>
+                <div><input name="lname" type="text" ng-model="lastname" required/></div>
+                <span ng-show="myForm.lname.$invalid && myForm.lname.$dirty">Please enter your name!</span>
+                </div>
+    <div class="row">
+                <div><label>Middle Name</label></div>
+                <div><input type="text" ng-model="middlename"/></div>
+                </div>
+                <div class="row required">
+                <div><label>Address1</div>
+                <div><input type="text" ng-model="address1"/></div>
+                </div>
+    <div class="row">
+                <div><label>Address2</div>
+                <div><input type="text" ng-model="address2"/></div>
+                </div>
+    <div class="row required">
+                <div><label>City</div>
+                <div><input type="text" ng-model="city"/></div>
+                </div>
+    <div class="row required">
+                <div><label>State</div>
+                <div><select name="states" autocomplete="on">
+                                <option value="1">Andhra Pradesh</option>
+                                <option value="2">Arunachal Pradesh</option>
+                                <option value="3">Assam</option>
+                                <option value="4">Bihar</option>
+                                <option value="5">Chhattisgarh</option>
+                                <option value="6">Goa</option>
+                                <option value="7">Gujarat</option>
+                                <option value="8">Haryana</option>
+                                <option value="9">Himachal Pradesh</option>
+                                <option value="10">Jammu & Kashmir</option>
+                                <option value="11">Jharkhand</option>
+                                <option value="12">Karnataka</option>
+                                <option value="13">Kerala</option>
+                                <option value="14">Madhya Pradesh</option>
+                                <option value="15">Maharashtra</option>
+                                <option value="16">Manipur</option>
+                                <option value="17">Meghalaya</option>
+                                <option value="18">Mizoram</option>
+                                <option value="19">Nagaland</option>
+                                <option value="20">Odisha (Orissa)</option>
+                                <option value="21">Punjab</option>
+                                <option value="22">Rajasthan</option>
+                                <option value="23">Sikkim</option>
+                                <option value="24">Tamil Nadu</option>
+                                <option value="25">Telangana </option>
+                                <option value="26">Tripura</option>
+                                <option value="27">Uttar Pradesh</option>
+                                <option value="28">Uttarakhand</option>
+                                <option value="29">West Bengal</option>
+                </select>
+                </div>
+    </div>
+    <div class="row required">
+                <div><label>Country</div>
+                <div><input type="text" ng-model="country"/></div>
+                </div>
+    <div class="row required">
+                <div><label>Zipcode</div>
+                <div><input type="text" ng-model="zipcode"/></div>
+                </div>
+                <div class="row required">
+                <div><label>User Type</label></div>
+                <div  ><select name="user" id="seller">
+                    <option selected="selected">---</option>
+                                <option value="1">Seller</option>
+                                <option value="2">Buyer</option>
+                                <option value="3">Both</option></td></tr>
+                                </select>
+                </div>
+    </div>
+    <div class="row required">
+                <div><label>Email</div>
+                <div><input type="type" name="mail" ng-model="email"/></div>
+                <p ng-show="myForm.mail.$invalid && !myForm.mail.$pristine">Enter a valid email.</p>
+                </div>
+    <div class="row required">
+                <div><label>Phone</div>
+                <div><input type="tel" ng-model="phone"/></div>
+                </div>
+    <div class="row required">
+                <div><label>Delivery Type</div>
+                <div><input type="text" ng-model="deliverytype"/></div>
+                </div>
+    <div class="row required sell">
+                <div><label>Subscription</label></div>
+                <div><input type="text" ng-model="subscription"/></div>
+                </div>
+    <div class="row required sell">
+                <div><label>Specialization</label></div>
+                <div><input type="text" ng-model="specialization"/></div>
+    </div>
+                <div class="row required sell">
+                <div><label>Food Type</label></div>
+                <div><select name="food">
+                                <option selected="selected">---</option>
+                                <option value="1">Meat</option>
+                                <option value="2">Seafood</option>
+                                <option value="3">Vegetarian</option>
+                                <option value="3">Vegan</option></td></tr>
+                                </select>
+                </div>
+                </div>
+    <div class="row">
+                <button id="submit" type="submit"  ng-click="ButtonClick()">Submit</button>
+                </div>
+</form>
+</div>
+<script>
+var myapp=angular.module("myApp",[]);
+myapp.controller('MyController',function(){
+
+});
+$('#seller').on('change',function(){
+    if( $(this).val()==="1"){
+    $(".sell").show()
+    }
+    else{
+    $(".sell").hide()
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body >
+<script>
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("div").click(function(event){
+event.stopImmediatePropagation();
+alert("was event.stopImmediatePropagation() called: " +
+event.isImmediatePropagationStopped());
+});
+});
+</script>
+<div style="height:100px;width:300px;padding:10px;border:1px solid blue;background-color:lightblue;">Click on this div element.</div>
+
+
+
+</body>
+</html>

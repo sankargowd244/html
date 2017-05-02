@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.descendants * {
+	display:block;
+	border:2px solid lightgrey;
+	color:lightgrey;
+	padding:5px;
+	margin:10px;
+}
+</style>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("ul").children().css({"color":"red", "border":"2px solid blue"});
+
+});
+</script>
+</head>
+<body class="descendants">body(greate-grand-parent)
+<div style="width:500px;">div(grand-parent)
+<ul>ul(direct parent)
+<li>li(child)
+<span>span(grandchild)</span>
+</li>
+</ul>
+</div>
+
+</body>
+</html>

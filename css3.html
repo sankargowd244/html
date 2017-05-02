@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.button {
+	background:#4CAF50;
+	cursor:pointer;
+	border:none;
+	color:white;
+	padding:15px 32px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	
+}
+.button2 {background:#008cba;}
+.button3 {background:#f44336;}
+.button4 {background:#e7e7e7;}
+.button5 {background:#555555;}
+.new {
+	column-count:4;
+	column-gap:40px;
+	column-rule-style:solid;
+	column-rule-width:3px;
+}
+
+#ani {
+	width:100px;
+	height:100px;
+	background:red;
+	position:relative;
+	animation-name:example;
+	animation-duration:4s;
+	animation-iteration-count:3;
+	animation:direction:alternate;
+}
+@-webkit-keyframes example {
+	0% {background:red;}
+	25% {background:pink;}
+	50% {background:blue;}
+	100% {background:green;}
+}
+
+#grade2 {
+	width:100px;
+	height:100px;
+	background:hotpink;
+	transition:width 2s, height 2s;
+}
+#grade2:hover {
+	width:500px;
+	height:100px;
+}
+
+#grade1 {
+	height:150px;
+	width:700px;
+	background:radial-gradient(red 5%, yellow 15%, green 80%);
+	
+}
+body {
+background:pink;
+}
+@media screen and (min-width:700px){
+   body{
+   background:cornflowerblue;
+   }
+}
+#one{border:1px solid black; width:24%; height:100px; float:left;}
+#two{border:1px solid black; padding:5px; width:46%; height:100px; float:left;}
+#three{border:1px solid black; width:24%; height:100px; display:flex}
+</style>
+</head>
+<body>
+<div id='one'></div>
+<div id='two'></div>
+<div id='three'></div>
+<br>
+<div id="grade1"></div><br>
+<div id="grade2"></div>
+<button class="button">green</button>
+<button class="button button2">blue</button>
+<button class="button button3">red</button>
+<button class="button button4">grey</butoon>
+<button class="button button5">black</button>
+<div id='ani' ></div>
+<div class="new">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</div>
+<div class="grad4"></div>
+</body>
+</html>

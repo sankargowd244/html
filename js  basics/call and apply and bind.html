@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+
+var object1={name:' this is object1'};
+var object2={name:' this is object2'};
+var object3= {name:'this is object3'};
+
+ 
+ callMe.call(object1, 'hello','world');
+ callMe.apply(object2, ['hi', 'there']);
+
+ var callMeDelegate=callMe.bind(object3, 'hello','world');
+ callMeDelegate();
+ 
+
+
+
+ function callMe(arg1, arg2) 
+ {
+ console.log(this.message+'along with the arguments' + arg1 +'and'+arg2 +".");
+}
+
+</script>
+</body>
+</html>

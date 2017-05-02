@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+</head>
+<body>
+<div class="slideshow" style="position: relative;">
+		<img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200">
+		<img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200">
+		<img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" >
+		<img src="http://malsup.github.com/images/beach4.jpg" width="200" height="200">
+		<img src="http://malsup.github.com/images/beach5.jpg" width="200" height="200" >
+	</div>
+
+
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+$(".slideshow").cycle({
+ fx: 'curtainX',
+   sync: false,
+   delay:-1000
+ });
+
+});
+</script>
+</body>
+</html>

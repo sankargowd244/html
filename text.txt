@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+<scrpt type="text/javascript"  src="foodstore.js"></script>
+</head>
+<body onload="process()">
+  <h3> the chuff bucket</h3>
+  enter the food you would like to order:
+  <input type="text"id="userInput">
+  <div id="underInput">
+</body>
+</html>

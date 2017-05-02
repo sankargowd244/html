@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").select(function(){
+    $("input").after("fuck ","<br>");
+});
+    $("button").click(function(){
+        $("input").trigger("select");
+});
+});
+</script>
+
+
+
+</head>
+<body>
+
+<input type="text" value="hello world"><br><br>
+
+<button>Find all text nodes in div and wrap them</button><br>
+
+</body>
+</html>

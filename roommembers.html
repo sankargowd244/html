@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ 
+ <style>
+ table{
+ 
+ border:1px solid black; 
+ border-collapse:none;
+ }
+ 
+  td{
+ width:100px;
+ height:30px;
+ }
+ #room{
+ display:none;
+ }
+ #expences{
+ display:none;
+ }
+ </style>
+</head>
+<body>
+<button type="button" id="button1">Room</button> <button type="button" id="button2">Expences</button>
+<table id="room">
+<tr>
+<td>sudeep</td></tr>
+<tr><td>sandeep</td></tr>
+<tr><td>sanketh</td></tr>
+<tr><td>sankar</td></tr>
+<tr><td>mahesh</td></tr>
+</table>
+<table id="expences">
+<tr>
+
+<td>sudeep</td>
+<td>5000</td>
+</tr>
+<tr><td>sandeep</td>
+<td>5000</td>
+</tr>
+<tr><td>sanketh</td>
+<td>5000</td>
+</tr>
+<tr><td>sankar</td>
+<td>5000</td>
+</tr>
+<tr><td>mahesh</td>
+<td>5000</td>
+</tr>
+</table>
+<script>
+$(document).ready(function(){
+$("#button1").click(function(){
+$("#room").show();
+$("#expences").hide();
+});
+$("#button2").click(function(){
+$("#expences").show();
+$("#room").hide();
+});
+});
+</script>
+</body>
+</html>

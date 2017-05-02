@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("div").focusin(function(){
+$(this).css("background", "#ffffcc");
+});
+$("div").focusout(function(){
+$(this).css("background", "#ffffff");
+});
+});
+</script>
+</head>
+<body>
+
+<div style="border: 1px solid black;padding:10px;">
+  First name: <input type="text" placeholder="type here"><br>
+  Last name: <input type="text">
+</div>
+
+
+
+</body>
+</html>

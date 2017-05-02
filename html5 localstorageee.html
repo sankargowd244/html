@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+
+<script src="../js/jquery.js"></script>
+<title>localstorage</title>
+</head>
+<body>
+
+<div id='result'></div>
+<script>
+if(typeof(storage)!=='undefined'){
+localStorage.setItem('lastName', 'sankar');
+document.getElementById('result').innerHTML=localStorage.getItem('lastName');
+}else{
+document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+    
+     
+</script>
+</body>
+</html>

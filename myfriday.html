@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+<head>
+<title >myfriday</title>
+<link  src="logo butterfly.png"  />
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+
+#wrap {
+	width:1349px;
+	height:1633px;
+}
+#header{
+	width:100%;
+	height:63px;
+	padding:5px 0;
+	background:none repeat scroll 0 0 #ffffff;
+	box-shadow:0 10px 6px -6px; #9b9b9b;
+	z-index:20;
+	top:0;
+	position:fixed !important;
+	opacity:0.7;
+}
+
+#logo {
+	text-align:center;
+	padding:5px 0;
+	width:50%;
+	float:left;
+
+}
+.rightnav {
+	width:50%;
+	float:right;
+	height:63px;
+
+}
+.rightnav li {
+	list-style:none;
+	font-size:14px;
+	color:#015291;
+}
+.rightnav ul li {
+	padding:10px 8px;
+	display:inline;
+	text-decoration:none;
+	position:relative;
+	font-weight:bold;
+	bottom:-20px;
+}
+.rightnav ul li ul{
+		display:none;
+		position:absolute;
+		left:0;
+		border:1px solid black;
+	    width:170px;
+		padding:10px 5px;
+}
+.rightnav ul li ul li{
+	color:black;
+    line-height: 60px;
+
+}
+.rightnav ul li:hover ul {
+	display:block;
+	background:white;
+
+}
+
+.rightnav ul li:hover {
+	background:#015291;
+	color:white;
+}
+#image {
+	position:relative;
+	width:100%;
+	height:600px;
+	overflow:hidden;
+}
+#msgon {
+	width:1349px;
+	height:72px;
+	left:0;
+	background:rgba(0,0,0,0.722);
+	top:320px;
+	position:absolute;
+	text-align:center;
+}
+#topmsg {
+	font-size:48px;
+	color:white;
+	left:400px;
+	top:15px;
+}
+#content {
+	height:45px;
+	text-align:center;
+	margin:15px;
+}
+#content1 {
+	font-size:24px;
+	margin:  auto;
+	height:35px;
+	vertical-align:baseline;
+}
+#line {
+	height:4px;
+	width:30px;
+	background:#ef3218;
+	margin: auto;
+}
+#demo{
+	height:160px;
+	margin:4px;
+}
+#demo1 {
+	height:160px;
+	width:940px;
+	margin:auto;
+}
+#demo2 {
+	width:300px;
+	height:140px;
+	float:left;
+}
+#demo5 {
+	width:135px;
+	height:75px;
+	margin: 10px auto;
+}
+#demo3 {
+	width:300px;
+	height:140px;
+	float:left;
+}
+#demo6 {
+	width:135px;
+	height:75px;
+	margin: 10px auto;
+}
+#demo4 {
+	width:300px;
+	height:140px;
+	float:left;
+}
+#demo7 {
+	width:135px;
+	height:75px;
+	margin: 10px auto;
+}
+#txt1 {
+	padding:10px 10px 10px 40px
+}
+#txt2 {
+	padding:10px 10px 10px 30px
+}
+#txt3 {
+	padding:10px 10px 10px 40px
+
+}
+.under {
+	width:100%;
+	height:600px;
+	background:#f4f4f4;
+	padding:45px 0 50px 0;
+	box-shadow:inset 0 10px 10px -10px;
+	position:relative;
+}
+#content2 {
+	font-size:26px;
+	margin: 10px 2px auto;
+	height:35px;
+	vertical-align:baseline;
+}
+#line1 {
+	height:4px;
+	width:30px;
+	background:#ef3218;
+	margin: auto;
+}
+#content3 {
+	height:45px;
+	text-align:center;
+	margin:15px;
+}
+#middle {
+	width:940px;
+	height:425px;
+	margin:auto;
+	padding-bottom:30px;
+}
+.column1 {
+	width:220px;
+	height:425px;
+	margin-right:16px;
+	border:1px solid #218adb;
+	border-top:6px solid #218adb;
+	float:left;
+}
+#data1 {
+	padding:10px;
+	font-size:20px;
+}
+.column2 {
+	width:220px;
+	height:425px;
+	margin-right:16px;
+	border:1px solid #218adb;
+	border-top:6px solid #218adb;
+	float:left;
+}
+.column3 {
+	width:220px;
+	height:425px;
+	margin-right:17px;
+	border:1px solid #218adb;
+	border-top:6px solid #218adb;
+	float:left;
+}
+.column4 {
+	width:220px;
+	height:425px;
+	border:1px solid #218adb;
+	border-top:6px solid #218adb;
+	float:left;
+}
+.footer {
+	background:#e1e1e1;
+	height:300px;
+	width:100%;
+	padding-top:20px;
+
+
+}
+#menu1 {
+	width:940px;
+	height:50px;
+	background:#42423d;
+	border-radius:5px;
+	top:15px;
+	margin:10px auto;
+	margin-top:20px;
+}
+#copy {
+	margin-left:15px;
+	padding-top:15px;
+	top:15px;
+	color:white;
+	font-size:17px;
+	float:left;
+	widt:50%;
+}
+#txt4 {
+
+	width:940px;
+	font-size:26px;
+	padding-left:112px;
+	margin:auto;
+
+}
+#txt5{
+	width:250px;
+	left:400px;
+	height:50px;
+	text-align:center;
+	margin: auto;
+	background:#429c18;
+	display:block;
+	font-size:26px;
+	font-weight:bold;
+	padding:20px 20px 5px 5px;
+	color:white;
+}
+#rightmenu {
+	width:50%;
+	float:right;
+}
+#menu3 li {
+	list-style:none;
+	color:#878787;
+	display:inline;
+	margin-left:15px;
+	padding:20px 15px 5px 10px;
+	font-size:18px;
+}
+#menu3 li:hover {
+	color:white;
+}
+
+</style>
+</head>
+<body>
+<div id="wrap">
+
+<!--header section -->
+<div id="header">
+<div id="logo"><img src="../new/myfridaylogo.png"></div>
+<div class="rightnav">
+<ul>
+<li>SOLUTIONS
+<ul>
+<li><a href="overview.html">overview</a></li>
+<li>testimonials</li>
+<li><a href="oprational.html">operational Performance</a></li>
+</ul>
+</li>
+<li>PRODUCT
+<ul>
+<li><span>overview</span></li>
+<li>air Framework</li>
+</ul>
+</li>
+<li>PARTNERS
+<ul>
+<li>our Partners</li>
+<li>bacome A Partner</li>
+</ul>
+</li>
+<li>RESOURCES
+<ul>
+<li>factsheets</li>
+<li>demo</li>
+<li>press</li>
+</ul>
+</li>
+<li>ABOUT
+<ul>
+<li>company</li>
+<li>careers</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div id="image"><img src="../new/wallpaper.jpg" style="width:100%; height:600px;">
+<div id="msgon"><div id="topmsg">Automate<span style="color:#939394; font-size:42px;">Operations</span>Management</div></div>
+</div>
+<div id="content">
+<div id="content1">Find out how the custemers reinventing their operations using myfriday</div>
+<div id="line"></div>
+</div>
+<div id="demo">
+<div id="demo1">
+<div id="demo2"><div id="demo5"><img src="../new/gebbs.png"></div><div id="txt1">2800+ US healthcare BPO</div></div>
+<div id="demo3"><div id="demo6"><img src="../new/tesco.gif"></div><div id="txt2">6500+ Employees Operation and Technology center for Tesco</div></div>
+<div id="demo4"><div id="demo7"><img src="../new/wabag.png"></div><div id="txt3">water management across 25 countries</div></div>
+</div>
+</div>
+<div class="under">
+<div id="content3">
+<div id="content2">Product Features</div>
+<div id="line1"></div></div>
+<div id="middle">
+<div class="column1"><img style="width:160px; height:160px;padding:30px" src="../new/home.png"><div id="data1">visualization tools that go beyond the past and describe the future.</div></div>
+<div class="column2"></div>
+<div class="column3"></div>
+<div class="column4"></div>
+</div></div>
+<div class="footer">
+<div id="menu1">
+<div id="copy">@2015.All rights Reserved</div>
+<div id="rightmenu">
+ <ul id="menu3">
+ <li>About</li>
+ <li>careers</li>
+ <li>Blog</li>
+ <li>Contact</li>
+ </ul>
+ </div>
+</div><br><br>
+<div id="txt4">Want to review your perfomance? schedule a demo today to find out.</div><br>
+<br>
+<div id="txt5">Request a Demo</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

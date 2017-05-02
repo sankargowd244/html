@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<script>
+//A regular expression is a sequence of charecters that forms a search pattern
+// the search pattern can be used for text search and text replace operations
+
+//regerx search
+  var str='visit w3schools';
+  var n=str.search(/w3schools/i);
+console.log(n);
+
+//regex replace
+var str='visit microsoft';
+var n=str.replace('microsoft', 'w3schools');
+console.log(n);
+
+//regex test
+var patt=/e/;
+patt.test('the best things in life are free');
+</script>
+
+</body>
+</html>

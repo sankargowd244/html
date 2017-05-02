@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body ng-app="myApp">
+<div ng-controller="MyCtrl">
+    {{hellos}}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script>
+var myApp = angular.module('myApp', []);
+
+//service style, probably the simplest one
+myApp.service('helloWorldFromService', function() {
+    this.sayHello = function() {
+        return "Hello, World!";
+    };
+});
+
+//factory style, more involved but more sophisticated
+myApp.factory('helloWorldFromFactory', function() {
+    return {
+        sayHello: function() {
+            return "Hello, World!";
+        }
+    };
+});
+    
+//provider style, full blown, configurable version     
+myApp.provider('helloWorld', function() {
+
+    this.name = 'Default';
+
+    this.$get = function() {
+        var name = this.name;
+        return {
+            sayHello: function() {
+                return "Hello, " + name + "!";
+            }
+        }
+    };
+
+    this.setName = function(name) {
+        this.name = name;
+    };
+});
+</script>
+</body>
+</html>

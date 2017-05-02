@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../js/angularjs.js"></script>
+<title>angularJS |$http Services</title>
+<script src="../js/controller.js"></script>
+</head>
+<body ng-app="myApp">
+<input type="text" ng-model="searchBox">
+<div ng-controller="people">
+<ul>
+<h2> names and age of programmers in the local</h2>
+<li ng-repeat="person in persons | filter:searchBox">
+       {{person.Name +':' + person.Age}}
+	   </li>
+</ul>
+</div>
+
+</body>
+</html>

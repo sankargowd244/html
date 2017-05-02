@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://www.w3schools.com/wesite/customers_MYSQL.php";
+
+xmlhttp.onreadystatechange=function(){
+	if (xmlhttp.readyState == 4 && xmlhttp.status ==200){
+	myFunction(xmlhttp.responseText);
+	}
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(responce){
+	var arr = JSON.parse(response);
+	var i;
+	var out= "<tablr>";
+	for(i=0;i<arr.length; i++){
+	out+= "<tr><td>"+
+	arr[i].Name +
+	"</td><td>" +
+	arr[i].city +
+	"</td><td>" +
+	arr[i].country +
+	"</td></tr>";
+	}
+	out+ + "</table>";
+	document.getelementById("demo").innerHTML=out;
+}
+//reverse str
+function reverseString(str){
+	str=str.split("").reverse().join([seperator='']);
+	return str;
+}
+reverseString("hello");
+//factorialize
+function factor(num){
+	var count=num;
+	if(count===0){
+	return 1;
+	}
+	else {
+	for(var i=1; i<count;i++){
+	num= num*i;
+	}
+	return num;
+	}
+}
+factor(7);
+//palindrome
+function palindrome(str){
+str=str.toLowerCase();
+for(var i=0; i<str.length; i++){
+	str=str.replace(" ", "");
+	str=str.replace(",", "");
+	str=str.replace(".", "");
+	str=str.replace("/","");
+	str=str.replace("_", "");
+	str=str.replace("-", "");
+	str=str.replace("(", "");
+	str=str.replace(")", "");
+}
+var copy= str.split('').reverse().join('');
+if(copy==str){
+return true;
+}
+return false;
+}
+palindrome("race car");
+//find longest
+function find(str){
+			var arrayOfStrings= str.split(' ');
+			var longestString='';
+			for(var i=0; i<arrayOfStrings.length; i++){
+			if(longestString.length<arrayOfStrings[i].length){
+			longestString=arrayOfStrings[i];
+			}
+			}
+			str=longestString;
+			return str.length;
+}
+find("the jump cat");
+//title
+function title(str) {
+		var arrayOfStrings=str.split(' ');
+		for(var i=0; i<arrayOfStrings.length; i++){
+		var placeHolder=arrayOfStrings[i];
+		var upLetter=placeHolder.charAt(0).toUpperCase();
+		placeHolder=placeHolder.slice(1,placeHolder.length).toLowerCase();
+		arrayOfStrings[i]=upLetter.concat(placeHolder);
+		}
+		str=arrayOfStrings.join(' ');
+		return str;
+}
+title("i am too intelligent");
+//largest number
+function largest(arr){
+		var largestArray=[];
+		for(var i=0; i<arr.length; i++){
+		var largestNumber=0;
+		for(var j=0; j<arr.length; j++) {
+		if(largestNumber=arr[i][j]){
+		largestNumber=arr[i][j];
+		}
+		}
+		largestArray.push(largestNumber);
+		}
+		return largestArray;
+}
+largest([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+//confirm end
+function confirm(str, target) {
+var start=str.lenght-(target.length);
+if(str.substr(start, str.length)===target){
+return true;
+}
+return false;
+}
+confirm("batman","n");
+//repeat
+function repeat(str, num) {
+		var holderArray=[];
+		for(var i=0; i<num; i++){
+		holderArray.push(str);
+		}
+		str=holderArray.join('');
+		return str;
+}
+repeat("abc", 5);
+//repeat
+function repeat(str, num) {
+	var holderArray=[];
+	for(var i=0; i<num; i++){
+	holderArray.push(str);
+	}
+	str=holderArray.join('');
+	return str;
+}
+repeat('ab',4);
+
+function truncate(str, num) {
+	if(num>3){
+	if(str.length>num) {
+	str=str.slice(0,num-3);
+	str=str.concat('...');
+	}
+	return str;
+	}
+	else{
+	str=str.slice(0, num);
+	str=str.concat('...');
+	}
+	return str;
+}
+truncate("a tisket a-tasket",3);
+//chunky
+function chunk(arr, size){
+		var holderArray=[];
+		var count=0;
+		while(count<arr.length){
+		holderArray.push(arr.slice(count, count+size);
+		count=count+size;
+		}
+		return holderArray;
+}
+chunk(["a", "b", "c", "d"], 3);
+//mutation
+function mutation(arr){
+		word1=arr[0].toLowerCase();
+		word2=arr[1].toLowerCase();
+		for(var i=0; i<word2.length; i++){
+		var value=word1.indexOf(word2[i]);
+		if(value===-1){
+		return false;
+		}
+		return true;
+		}
+		mutation("hello","Hello");
+}
+function bouncer(arr){
+	var holderArr=[];
+	holderArr=arr.filter(remove);
+	return holderArr;
+}
+	function remove(value){
+	return Boolean(value);
+	}
+	bouncer([9,"ate","",false,3]);
+	//destroy
+	function destroy(arr){
+	var args=array.prototype.slice.call(arguments);
+	args.splice(0,1);
+	var placeHolder=[];
+	for(var i=0; i<arr.length; i++){
+	for(var j=0; j<args.length; j++){
+	if(arr[i)==args[j]){
+	delete aarr[i];
+	}
+	}
+	}
+	placeHolder=arr.filter(remove);
+	return placeHolder;
+	
+	}
+	function remove(value){
+	return Boolean(value);
+	}
+	destroy([1,2,3,4,],2,4);
+	//diff
+	function diffArray(arr1,arr2){
+	var newArr=[];
+	for(var i=0; i<arr1.length; i++){
+	if(arr2.indexOf(arr1)===-1){
+	newArr.push(arr1[i]);
+	}
+	}
+	for(var j=0;j<arr2.length; j++){
+	if(arr2.indexOf(arr1[i]===-1){
+	newArr.push(arr2[i]);
+	}
+	}
+	return newStr;
+	}
+	diffArray([1,2,3],[2,3,4]);
+	//anathor
+	function whereAreYou(collection, source){
+	var arr=collection.filter(function(item);
+	for(var i in source){
+	if(source[i)!=item[i]){
+	return false;
+	}
+	}
+	return true;
+	}
+	whereAreYou([{first:"san",last:"shah"},{first:"sw",last:"sr"}],{last:"sr"});
+	//replce
+	function myReplace(str,before,after){
+	if(before.charAt(0).===before.charAt(0).toUpperCase()){
+	str=str.replace(before,after.charAt(0).toUppeCase(0)+after.slice(1));
+	}
+	else{
+	str=str.replace(before,after);
+	}
+	return str;
+	}
+	myReplace("A quick bron fox jumped over the lazy dog", "jumped", "after");
+	//pig latin 
+	function translatePgi(str){
+	var letters=str.split('');
+	var owelRegEx=/[aeiou]/;
+	if(owelRegEx.test(letters[0])){
+	return letters.join('')+ 'way';
+	}
+	while(true){
+	if(!owelRegEx.test(letters[0])){
+	letters.push(letters.splice(0,1));
+	}
+	else {
+	break;
+	}
+	}
+	str=letters.join('')+'ay';
+	return str;
+	}
+	transletePig('consonant');
+	//DNA
+	function pair(str){
+	str=str.toUpperCase();
+	str=str.split('');
+	var holderArray=[];
+	for(var i=0; i<str.length; i++){
+	if(str[i]=='G'){
+	holderArray=push(['G','C']);
+	}
+	else if(str[i]=='C'){
+	holderArray.push(['C','G']);
+	}
+	else if(str[i]=='A'){
+	holderArray.push(['A','T']);
+	}
+	else if(str[i]=='T'){
+	holderArray.push(['T','A']);
+	}
+	}
+	return holderArray;
+	}
+	pair('gcgata');
+	// missing letters
+	function fearNo(str){
+	var alphabet="abcdefghijklmnopqrstuvwxyz";
+	alphabet=alphabet.split('');
+	str=str=str.split('');
+	if(str[0]!=='a'){
+	return undefined;
+	}
+	for(var i=0; i<str.length; i++){
+	if(str[i]!==alphabet[i]){
+	return alphabet[i];
+	}
+	}
+	return str;
+	
+	}
+	fearNo("abce");
+	//sort
+	function uniteUnique(arr1,arr2,arr3){
+	var placeHolder=arr1;
+	for(var i=0; i<arguments.length; i++){
+	for(var j=0;j<arguments[i].length; j++){
+	if(placeHolder.indexOf(arguments[i][j]===-1)){
+	placeHolder.push(arguments[i][j]);
+	}
+	}
+	}
+	arr1=placeHolder;
+	return arr1;
+	}
+	uniteUnique([1,3,2],[4,5,3],[2,4,5]);
+	//convert html entities
+	function convert(str){
+	var placeHolder=
+	}
+	//json
+	$(document).ready(function(){
+	$("#getMessage").on("click", function(){
+	$getJSON("/json/cats.json", function(){
+	var html= "";
+	json.forEach(function(val){
+	html+= "<div class='cat'> ";
+	html+= "<img src= '" +val.imageLink= '"> ";
+	html+= "</div>";
+	});
+	
+	$(".message").html(html);
+	});
+	});
+	});
+</script>
+</body>
+</html>

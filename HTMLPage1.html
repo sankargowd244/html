@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <link rel="stylesheet" href="../css/style.css" />
+	https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+</head>
+<body ng-app="myApp">
+    <header class="head">
+        <div class="container-data">
+            <img src="../new/springboard_logo.png" />
+            <div id="ratecounter">
+
+            </div>
+        </div>
+    </header><br />
+    <section class="main-data" ng-controller="myCtrl">
+        <div id="searchcontent">
+            <input type="text" placeholder="search" ng-model="search" />
+            <section id="nav-data">
+                <div id="head">{{path.name}}</div>
+                <div id="img"><img src="{{path.image}}"/></div>
+                <div id="data">{{path.tags}}</div>
+
+                <span id="learn">{{path.learners}}</span><br />
+                <span id="hours">{{path.hours}}</span>
+				<span id="hours" ng-show='path.hours > 232' class='glyphicon glyphicon-pencil'></span>
+
+                <div id="descrip">{{path.description}}</div>
+            </section>
+            <section id="search-sort">
+                <button ng-click="sortData('search')"></button>
+            </section>
+        </div><br />
+		
+        <footer id="search-data">
+
+            <table id="tcontent">
+                <!---- <span ng-click="left-click=click+1"><</span> -->
+                <tbody id="tbody">
+                    <tr>
+                        <td ng-repeat="path in paths | filter:{image:search}" ng-click="showDetails($event,path)" >{{path.name}}</td>
+                    </tr>
+                </tbody>
+              
+           </table>
+        </footer>
+			<div ng-include src="'marquee.html'"></div>
+    </section>
+    <div ng-show="message">
+        <h2>show</h2>
+    </div>
+
+    <div ng-hide="!message">
+        <h2>Hide</h2>
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/angular.js"></script>
+    <script src="../js/script1.js"></script>
+
+
+</body>
+</html>

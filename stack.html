@@ -1,0 +1,205 @@
+ <!doctype html>
+<html>
+<head>
+
+
+</head>
+<body>
+<script type="java script>">
+var  stack= function(){
+	this.top= null;
+	this.size=0;
+};
+var Node= function (data){
+	this.data= data;
+	this.previous= null;
+};
+stack.prototype.push= function(data){
+	var node= new Node(data);
+	node.previous= this.top;
+	this.top= node;
+	this.size+= 1;
+	return this.top;
+};
+Stack.prototype.pop= function(){
+	temp= this.top;
+	this.top= this.top.previous;
+	this.size -= 1;
+	return emp;
+	
+};
+//for queue
+	 var queue= function(){
+	 this.first= nill;
+	 this.size=0;
+	 };
+	 var Node= function(data){
+	 this.data= data;
+	 this.next= null;
+	 };
+	 Queue.prototype.enqueue= function(data){
+	 var node= new Node(data);
+	 if(!this.first){
+	 this.first= node;
+	 } else {
+	 n= this.first;
+	 while(n.next){
+	 n=n.next;
+	 }
+	 n.next= node;
+	 }
+	 this.size+=1;
+	 return node;
+	 };
+	 Queue.prototype.dequeue= function(){
+	 temp= this.first;
+	 this.first= this.first.next;
+	 this.size- =1;
+	 return temp;
+	 };
+	 // classic stack in onathor way
+	 var stack=[];
+	 stack.push("first");
+	 stack.push('second');
+	 stack.push("last");
+	 stack.pop();
+	 // one way to implement queue is to  insert element in oppositmsense than stack
+	 var queue=[];
+	 queue.unshift("first");
+	 queue.unshift("second");
+	 queue.unshift("last");
+	 queue.pop();
+	 // onathor way
+	 var queue=[];
+	 queue.push("first");
+	 queue.push("second");
+	 queue.push("last");
+	 queue.shift();
+	 // sort array
+	 var fruit=["cherry", "apple", "banana", "citrus"];
+	 fruit.sort(); //['apple','banana', citrus','cherry'];
+	 // anathor way to sort
+	 var number= [4,5,2,1,3,9];
+	 number.sort(function(a,b){
+	 return a-b;
+	 });
+	 console.log(number); //[1,2,3,4,5,9];
+	 // for map
+	 var numbers=[1,3,4];
+	 var roots= number.map(Math.sqrt);// roots is now [1,9,16];
+	 // anathor way of map
+	 var kvArray= [{key:1, value:10},{key:2, value:30},{key:3, value:40}];
+	 var reformattedArray= kvArray.map(function(obj){
+	 var rObj ={};
+	 rObj[obj.key]= obj.value;
+	 return rObj;
+	 });
+	 // reformattedArray is now[{1:10}, {2:30},{3:40}]
+	 //kvArray is still [{key:1, value:10},{key:2, value:30},{key:3, value:40}];
+	 
+	 //anathor way
+	 var number=[1,3,4,5];
+	 var doubles= number.map(function(num){
+	 return num*2;
+	 });
+	 // doubles is now [2,6,8,10] number is still [1,3,4,5]
+	 
+	 // for unshift
+	 var arr=[1,3];
+	 arr.unshift(0); // result is [0,1,3];
+	 arr.unshift(-2,-1); // arr is [-2,-1,0,1,3];
+	
+	// algorithms
+	 // factorial
+	 function factorial(n){
+	 if(n==0)
+	 return 1;
+	 else
+	 return (n*factorial(n-1));
+	 }
+	 alert(factorial(5));
+	 // leap year
+	 function checkLeap(year) {
+	 if(((year%4==0)
+	 && (year%100!=0))|| (year%400==0)){
+	 alert(year+ ' is  leap');
+	 return true;
+	 } else {
+	 alert(year+ 'is not leap');
+	 return false;
+	 }
+	 }
+	 alert(checkLeap(2012));
+	 alert(checkLeap(2013));
+	 // max- min algorithms
+	 var tab =new Array(16,2,3,4,,5,45,56,78,23);
+	 var min= tab[0];
+	 var max= tab[0];
+	 for(var i=0; i<tab.length; i++){
+	 if(min>tab[i]){
+	 min=tab[i];
+	 
+	 }
+	 }
+	 alert("Min= " + min + ", Max= "+ max);
+	 //random string
+	 var list= "abcdefghijklmnopqrstuvwxyz9876543210";
+	 function randomString(how_long){
+	 var tmp= '', i=0;
+	 var list_len= _list.length;
+	 for(i=0; i<how_long; i++){
+	 temp+=_list.charAt(Math.random()* list_len));
+	 }
+	 return tmp;
+	 }
+	 alert(randomString(8));
+	 //binary search
+	 inputList= new Array();
+	 inputList[0]= "E";
+	 inputList[1]= "I";
+	 inputList[2]= "O";
+	 inputList[3]= "P";
+	 inputList[4]= "Q";
+	 inputList[5]= "R";
+	 inputList[6]= "T";
+	 inputList[7]= "U";
+	 inputList[8]= "W";
+	 inputList[9]= "Y";
+	 function binarySearch(inputList, key) {
+	 var left=0;
+	 var right= input.length-1;
+	 while(left<=right){
+	 var mid= parsInt((left+right)/2);
+	 if(inputList[mid]==key)
+	 return mid;
+	 else if(inputList[mid]<key)
+	 left= mid+1;
+	 else
+	 right= mid-1;
+	 }
+	 return 'NOT FOUND';
+	 }
+	 alert(binarySearch(inputList, 'T'));
+	 alert(binarySearch(inputList, 'Z'));
+	
+
+	// stack/LIFO
+	 function ourStack(){
+	 var stack= new Array();
+	 stack.push("Audi");
+	 stack.push("Skoda");
+	 stack.push("Opel");
+	 stack.push("Vw");
+	 // in thiscase vw is on top of the stack
+	 // (adde as the last)
+	 alert(stack.toString()); 
+	 stack.pop(); // get Vw
+	 alert(stack.toString()); // no Vw  anymore
+	 // add new element
+	 stack.push("Mersides");
+	 alert(stack.toString()); //mersides on the top
+	 }
+	 ourStack();
+</script>
+</body>
+</html>

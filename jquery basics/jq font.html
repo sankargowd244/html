@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+
+<script
+src="../../js/jquery.js"></script>
+</head>
+<body>
+Fontsize:<a href="#" id="small">small</a> <a href="#" id="big">big</a>
+<p>This is smaller</p>
+<p>This is smaller</p>
+
+<script>
+function change_size(element, size){
+	var current=parseInt(element.css('font-size'));
+	if(size=='small'){
+	var new_size= current-2;
+	} else if(size=='big'){
+	var new_size= current+2;
+	}
+element.css('font-size', new_size+'px');	
+}
+$("#small").click(function(){
+	change_size($('p'), 'small');
+});
+$("#big").click(function(){
+	change_size($('p'), 'big');
+});
+</script>
+
+
+
+</body>
+</html>

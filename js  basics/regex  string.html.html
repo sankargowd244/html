@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+
+</style>
+
+</head>
+<body>
+
+<script>
+//string regerx  for match, replace, split, search
+
+ var string='Tom contact number is 0099887766, his age is 545454';
+ string+ = 'Mark contact is 57657876, his age is 99898';
+  document.write(string.match(/d+/g));
+  document.write(string.replace(/d+/g, 'XXX'));
+  document.write(string.split(/d+/g));
+  document.write(string.search(/d+/));
+    
+// case insensitivewith 
+var word='Tom contact number is 878787877, tom is 34, TOM color of red';
+document.write(word.match(/tom/gi));
+</script>
+</body>
+</html>

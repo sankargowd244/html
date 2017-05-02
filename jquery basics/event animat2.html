@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+ var div= $("div");
+ div.animate({left:'200px'},"slow");
+ div.animate({fontsize: '5em'},"slow");
+ 
+});
+});
+</script>
+</head>
+<body>
+<button>click</button>
+
+<div style= "width:400px; height:400px; background-color:red; position:absolute;">hello</div>
+
+</body>
+</html>

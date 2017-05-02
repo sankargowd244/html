@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<p> please input a number between 5 and 10:</p>
+<input id="demo" type="text">
+<button type="button" onclick="myfunction()">test input</button>
+<p id="message"></p>
+<script>
+function myfunction(){
+var message, x;
+message =   document.getelementbyid("message");
+messge.innerhtml ="";
+x=document.getelementbyid("demo").value;
+try {
+if(x=="") throw "empty";
+if(nan(x)) throw "not a number";
+x=number(x);
+if(x<5)  throw "too low";
+if(x>10) throw "too high";
+
+}
+catch(err){
+message.innerhtml = "input is "+err;
+}
+}
+</script>
+</body>
+</html>

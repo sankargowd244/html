@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("div").click(function(event){
+alert("event  i excuted");
+event.stopimmediatepropagation();
+});
+$("div").click(function(event){
+alert("event 2 excuted");
+});
+$("div").click(function(event){
+alert("event 3 excuted");
+});
+});
+
+
+</script>
+</head>
+<body>
+<div>click me:</div>
+<p>trigger the select event for</p>
+<p>alkgnzlnclsnclsnv</p>
+
+</body>
+</html>

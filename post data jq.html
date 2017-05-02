@@ -1,0 +1,32 @@
+ <!doctype html>
+<html>
+<head>
+<script src="../js/jquery.js"></script>
+<script>
+$(function(){
+	$("#excute").click(function() {
+	var person= { firstName:$("#firstName").val(), lastName:$("#lastNmae").val()};
+	$.post(person).done(function() (data) {
+	$("#output").text(data.firstName+''+data.lastName);
+});
+});
+});
+</script>
+</head>
+<body>
+<div>
+	<lable for="firstName">firstName:</lable>
+	<input type="text" class="formControl" id="firstName">
+</div>
+<div>
+	<lable for="lastName">lastName:</lable>
+	<input type="text" class="formControl" id="lastName">
+</div>
+<div>
+	<button class="btn" id="excute">save data</button>
+</div>
+<div id="output">data will go here
+</div>
+
+</body>
+</html>
